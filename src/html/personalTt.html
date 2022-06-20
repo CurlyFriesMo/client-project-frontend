@@ -3,592 +3,483 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Effenaar Project</title>
+    <title>Personal timetable</title>
 
     <style>
-        body {
-            margin: 10%;
+        .content {
+            margin: 4%;
         }
 
-        .widthVenueTt {
-            width: 100px;
+        .header {
+            height: 110px;
+            background-image: linear-gradient(to right, #4B4E4A, #CD7454);
+
+            margin-top: -114px;
         }
 
-        .TestLeeg{
-            stroke:#33ff00 65px solid;
-            background-color: #ffffff; 
+        .headerLogo {
+            height: 110px;
         }
 
-        .bgPaars {
-            background-color: blueviolet;
+        .headerNav {
+            margin-left: 100px;
+            display: inline-block;
         }
 
-        .bgGeel {
-            background-color: rgb(248, 255, 145);
+        .headerNavContent {
+            margin-left: 5px;
+            padding-bottom: 25px;
+            padding-top: 15px;
+            padding-right: 30px;
+            padding-left: 25px;
+            background-color: white;
+            font-size: medium;
         }
 
-        .bgDesign {
-            background-color: #CD7454;
+        .headerTitle {
+            margin-left: 280px;
+            margin-bottom: 130px;
+            padding-bottom: 130px;
+            margin-top: 55px;
+            color: white;
+            font-size: xx-large;
+            display: inline-block;
         }
 
-        .PTtImg {
+        .borderDotted {
+            border-right: 2px dotted black;
+        }
+
+        .borderSolid {
+            border-right: 2px solid black;
+        }
+
+        .h200 {
+            height: 200px;
+        }
+
+        .tijdenTt {
+            height: 20px;
+        }
+
+        .h1w50 {
+            height: 1px;
+            width: 50px;
+        }
+
+        .perKwartier {
+            height: 31px;
+            width: 25px;
+            border-right: 2px solid black;
+
+        }
+
+        .bgWhite {
             background-color: white;
         }
 
-        .bgBlauwTest {
+        .bgOranjeHtc {
             background-color: #CD7454;
-        }
-
-        .bgRoze {
-            background-color: rgb(255, 167, 248);
-        }
-
-        .bgOranje {
-            background-color: rgb(248, 149, 0);
-        }
-
-        .bgGrijs {
-            background-color: rgb(178, 186, 187);
-        }
-
-        .personalTtBackground {
-            background-color: #69008d;
-            width: 100%;
-            height: 15%; 
-            font-family: "Playfair Display", serif;
-        }
-
-        .personalTtBackgroundTest {
-            background-color: #CD7454;
-            width: 100%;
-            height: 15%; 
-            font-family: "Playfair Display", serif;
         }
 
         .placeholder {
-            height: 40px;
+            height: 30px;
+            margin: 10px;
+        }
+    </style>
+
+    <style>
+        #overlayCSS {
+            position: fixed;
+            /* display: none; */
+            background-color: rgba(255, 0, 200, 0.342);
+            opacity: 100%;
         }
 
+        .content {
+            color: darkblue;
+        }
 
+        #overlayCSS2 {
+            position: fixed;
+            display: none;
+            height: 200px;
+            width: 750px;
+            background-color: cyan;
+            opacity: 50%;
+            cursor: default;
+        }
 
+        .content2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: darkblue;
+            margin: 100px;
+        }
     </style>
+
+    <script>
+        function up() {
+            document.getElementById("overlayCSS").style.display = "block";
+        }
+
+        function down() {
+            document.getElementById("overlayCSS").style.display = "none";
+        }
+
+        function up2() {
+            document.getElementById("overlayCSS").style.display = "block";
+        }
+
+        function down2() {
+            document.getElementById("overlayCSS").style.display = "none";
+        }
+    </script>
+
+
 </head>
 
 <body>
-    <div class="Timetables">
+    <img src="hitthecityLofo.jpg" class="headerLogo">
+    <div class="header">
+
+        <h3 class="headerTitle">Timetables</h3>
+        <div class="headerNav">
+            <span class="headerNavContent">2021 &#x25BC; </span>
+            <span class="headerNavContent">FRIDAY OCT 15 </span>
+            <span class="headerNavContent">SATURDAY OCT 16</span>
+            <span class="headerNavContent">SUNDAY OCT 17</span>
+        </div>
+    </div>
+
+
+
+    <div class="content">
         <h1>Friday October 15</h1>
         <h2>personal timetable</h2>
-        <div class="personalTt">
-            <p>18.00</p>
-            <div class="personalTtBackground">
-                <p>hoi</p>
-            </div>
+        <div>
+            <div>
+                <!-- achtergrond timetable zonder overlay -->
+                <table border="0" cellspacing="0">
 
-            <div class="personalTtAchtergrondTest">
-                <table border="5" cellspacing="0" align="center" class="bgBlauwTest">
-                    <tr >
-                        <td align="center"  rowspan="6" height="50"
-                            class="widthVenueTt">leeg<br>
-                            
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>18:00-18:30</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>18:30-19:00</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>19:00-19:30</b>
-                        </td>
-                        <td align="center" height="50" width="50">
-                            <b>19:30-20.00</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>20:00-20:30</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>21:00-21:30</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>21:30-22:00</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>22:00-22:30</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>22:30-23:00</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>23:00-23:30</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>23:30-00:00</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>00:00-00:30</b>
-                        </td>
-    
-    
-                    <tr class="contentPTt PTtLeeg">
-                        <td colspan="1" rowspan="5" align="center" height="10">
-                        </td>
-                        <td colspan="2" rowspan="5" align="center" height="10">
-                        </td>
-                        <td colspan="2" rowspan="5" align="center" height="10">
-                        </td>
-                        <td colspan="2" rowspan="5" align="center" height="10">
-                        </td>
-                        <td colspan="2" rowspan="5" align="center" height="10">
-                        </td>
-                        <td colspan="2" rowspan="5" align="center" height="10">
-                        </td>
-                        <td colspan="2" rowspan="5" align="center" height="10">
-                        </td>
-                    </tr>
-                    <tr class="TestLeeg">
-                        <td colspan="1" align="center" height="50"></td>
-                     
-                        
-                    </tr>
-                    <tr class="TestLeeg">
-                        <td colspan="1" align="center" height="50"></td>
-                        
-                    </tr>
                     <tr>
-                        <td colspan="1" align="center" height="50"></td>
-                       
+                        <!-- Dit is niet zichtbaar. Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
                     </tr>
-                    <tr class="TestLeeg">
-                        <td colspan="0" align="center" height="20">
+
+                    <tr>
+                        <!-- Hier worden de uren aangegeven boven de timetables -->
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>18:00</b>
                         </td>
-                        
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>19:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>20.00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>21:00</b>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>22:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>23:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>00:00</b>
+                        </td>
                     </tr>
-                    
+
+                    <tr class="bgOranjeHtc">
+                        <!-- Dit is de achtergrond van de persoonlijke timetable. Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
+                        <td class="borderSolid h200">
+                        </td>
+                        <td class="borderDotted h200">
+                        </td>
+                        <td class="borderSolid h200">
+                        </td>
+                        <td class="borderDotted h200">
+                        </td>
+                        <td class="borderSolid h200">
+                        </td>
+                        <td class="borderDotted h200">
+                        </td>
+                        <td class="borderSolid h200">
+                        </td>
+                        <td class="borderDotted h200">
+                        </td>
+                        <td class="borderSolid h200">
+                        </td>
+                        <td class="borderDotted h200">
+                        </td>
+                        <td class="borderSolid h200">
+                        </td>
+                        <td class="borderDotted h200">
+                        </td>
+                        <td class="borderSolid h200">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
                 </table>
             </div>
 
+            <div>
 
-
-
-            <div class="personalTtAchtergrond">
-                <table border="5" cellspacing="0" align="center" class="bgDesign">
-                    <tr >
-                        <td align="center"  rowspan="6" height="50"
-                            class="widthVenueTt">leeg<br>
-                            
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>18:00-18:30</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>18:30-19:00</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>19:00-19:30</b>
-                        </td>
-                        <td align="center" height="50" width="50">
-                            <b>19:30-20.00</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>20:00-20:30</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>21:00-21:30</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>21:30-22:00</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>22:00-22:30</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>22:30-23:00</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>23:00-23:30</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>23:30-00:00</b>
-                        </td>
-                        <td align="center" height="50"
-                            width="50">
-                            <b>00:00-00:30</b>
-                        </td>
-    
-    
-                    <tr class="contentPTt PTtLeeg">
-                        <td colspan="1" align="center" height="10">
-                        </td>
-                        <td colspan="2" align="center" height="10">
-                        </td>
-                        <td colspan="2" align="center" height="10">
-                        </td>
-                        <td colspan="2" align="center" height="10">
-                        </td>
-                        <td colspan="2" align="center" height="10">
-                        </td>
-                        <td colspan="2" align="center" height="10">
-                        </td>
-                        <td colspan="2" align="center" height="10">
-                        </td>
-                    </tr>
-                    <tr class="contentPTt">
-                        <td colspan="1" align="center" height="50" class="PTtImg">
-                            <img src="placeholder-image.jpeg" class="placeholder">
-                        </td>
-                        <td colspan="2" align="center" height="50" class="PTtLeeg"></td>
-                        <td colspan="1" align="center" height="50" class="PTtImg">
-                            <img src="placeholder-image.jpeg" class="placeholder">
-                        </td>
-                        <td colspan="2" align="center" height="50" class="PTtImg">
-                            <img src="placeholder-image.jpeg" class="placeholder">
-                        </td>
-                        <td colspan="2" align="center" height="50" class="PTtImg">
-                            <img src="placeholder-image.jpeg" class="placeholder">
-                        </td>
-                        <td colspan="2" align="center" height="50"></td>
-                        <td colspan="2" align="center" height="50"></td>
-                        <td colspan="2" align="center" height="50"></td>
-                        <td colspan="1" align="center" height="50" class="PTtLeeg"></td>
-                        
-                    </tr>
-                    <tr class="contentPTt">
-                        <td colspan="1" align="center" height="50" class="PTtImg">
-                            <p>Max Frimout</p>
-                        </td>
-                        <td colspan="2" align="center" height="50" class="PTtLeeg"></td>
-                        <td colspan="1" align="center" height="50" class="PTtImg">
-                            <p>De Witte Kunst</p>
-                        </td>
-                        <td colspan="2" align="center" height="50" class="PTtImg">
-                            <p>Commander Spoon</p>
-                        </td>
-                        <td colspan="2" align="center" height="50" class="PTtImg">
-                            <p>NCT</p>
-                        </td>
-                        <td colspan="2" align="center" height="50"></td>
-                        <td colspan="1" align="center" height="50"></td>
-                    </tr>
-                    <tr>
-                        <td colspan="1" align="center" height="50" class="PTtImg">
-                            <p>Dance</p>
-                        </td>
-                        <td colspan="2" align="center" height="50" class="PTtLeeg"></td>
-                        <td colspan="1" align="center" height="50" class="PTtImg">
-                            <p>Synth-pop</p>
-                        </td>
-                        <td colspan="2" align="center" height="50" class="PTtImg">
-                            <p>Dark folk</p>
-                        </td>
-                        <td colspan="2" align="center" height="50" class="PTtImg">
-                            <p>DnB</p>
-                        </td>
-                        <td colspan="1" align="center" height="50"></td>
-                        <td colspan="1" align="center" height="50" class="PTtImg">
-                            <p>Alternatief</p>
-                        </td>
-                        <td colspan="1" align="center" height="50" class="PTtImg">
-                            <p>Neurofunk</p>
-                        </td>
-                        <td colspan="1" align="center" height="50"></td>
-                    </tr>
-                    <tr class="contentPTt  PTtLeeg">
-                        <td colspan="1" align="center" height="20">
-                        </td>
-                        <td colspan="2" align="center" height="20">
-                        </td>
-                        <td colspan="2" align="center" height="20">
-                        </td>
-                        <td colspan="2" align="center" height="20">
-                        </td>
-                        <td colspan="2" align="center" height="20">
-                        </td>
-                        <td colspan="2" align="center" height="20">
-                        </td>
-                        <td colspan="2" align="center" height="20">
-                        </td>
-                    </tr>
-                    
-                </table>
+                <div id="overlayCSS2">
+                    <div class="content2">TEXT ON THE OVERLAY SCREEN
+                        <br><button onclick="down2()">Click to Close overlay</button>
+                    </div>
+                </div>
+                <h2>CLICK TO SEE OVERLAY</h2>
+                <button onclick="up2()">Overlay Up</button>
             </div>
 
-
-            <table border="5" cellspacing="0" align="center" class="bgDesign">
-                <tr class="bgOranje">
-                    <td align="center"  rowspan="6" height="50"
-                        class="widthVenueTt">leeg<br>
-                        
-                    </td>
-                    <td align="center" height="50"
-                        width="50">
-                        <b>18:00-18:30</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="50">
-                        <b>18:30-19:00</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="50">
-                        <b>19:00-19:30</b>
-                    </td>
-                    <td align="center" height="50" width="50">
-                        <b>19:30-20.00</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="50">
-                        <b>20:00-20:30</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="50">
-                        <b>21:00-21:30</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="50">
-                        <b>21:30-22:00</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="50">
-                        <b>22:00-22:30</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="50">
-                        <b>22:30-23:00</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="50">
-                        <b>23:00-23:30</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="50">
-                        <b>23:30-00:00</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="50">
-                        <b>00:00-00:30</b>
-                    </td>
+            <br></br>
 
 
-                <tr class="bgGeel">
-                    <td colspan="1" align="center" height="20">
-                    </td>
-                    <td colspan="2" align="center" height="20">
-                    </td>
-                    <td colspan="2" align="center" height="20">
-                    </td>
-                    <td colspan="2" align="center" height="20">
-                    </td>
-                    <td colspan="2" align="center" height="20">
-                    </td>
-                    <td colspan="2" align="center" height="20">
-                    </td>
-                    <td colspan="2" align="center" height="20">
-                    </td>
-                </tr>
-                <tr class="bgPaars">
-                    <td align="center" height="50">
-                        <b>yoyoyy</b></td>
-                    <td align="center" height="50">Eng</td>
-                    <td align="center" height="50">Mat</td>
-                    <td align="center" height="50">Che</td>
-                    <td rowspan="3" align="center" height="50">
-                        <!-- <h2>L<br>U<br>N<br>C<br>H</h2> -->
-                    </td>
-                    <td colspan="3" align="center"
-                        height="50">LAB</td>
-                    <td align="center" height="50">Phy</td>
-                </tr>
-                <tr class="bgRoze">
-                    <td align="center" height="50">
-                        <b>Tuesday</b>
-                    </td>
-                    <td colspan="3" align="center"
-                        height="50">LAB
-                    </td>
-                    <td align="center" height="50">Eng</td>
-                    <td align="center" height="50">Che</td>
-                    <td align="center" height="50">Mat</td>
-                    <td align="center" height="50">SPORTS</td>
-                </tr>
+            <div>
+
+                <div id="overlayCSS">
+
+                    <!-- de overlay zelf -->
+                    <table border="0" cellspacing="0">
+
+                        <tr>
+                            <!-- Dit is niet zichtbaar. Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                        </tr>
+
+
+                        <tr height="50">
+                            <td class="bgWhite">
+                                <img src="placeholder-image.jpeg" class="placeholder">
+                            </td>
+                            <td colspan="2" align="center"></td>
+                            <td colspan="1" align="center" class="bgWhite">
+                                <img src="placeholder-image.jpeg" class="placeholder">
+                            </td>
+                            <td colspan="2" align="center" class="bgWhite">
+                                <img src="placeholder-image.jpeg" class="placeholder">
+                            </td>
+                            <td colspan="2" align="center" class="bgWhite">
+                                <img src="placeholder-image.jpeg" class="placeholder">
+                            </td>
+                            <td colspan="2" align="center"></td>
+                            <td colspan="2" align="center"></td>
+                            <td colspan="2" align="center"></td>
+                            <td colspan="1" align="center"></td>
+
+                        </tr>
+                        <tr height="50">
+                            <td colspan="1" align="center" class="bgWhite">
+                                <p>Max Frimout</p>
+                            </td>
+                            <td colspan="2" align="center" class="PTtLeeg"></td>
+                            <td colspan="1" align="center" class="bgWhite">
+                                <p>De Witte Kunst</p>
+                            </td>
+                            <td colspan="2" align="center" class="bgWhite">
+                                <p>Commander Spoon</p>
+                            </td>
+                            <td colspan="2" align="center" class="bgWhite">
+                                <p>NCT</p>
+                            </td>
+                            <td colspan="2" align="center"></td>
+                            <td colspan="1" align="center"></td>
+                        </tr>
+
+                        <tr height="40">
+                            <!-- hier staat een genre van het artiesten blok -->
+                            <td colspan="1" align="center" class="bgWhite">
+                                <p>Dance</p>
+                            </td>
+                            <td colspan="2" align="center" class="PTtLeeg"></td>
+                            <td colspan="1" align="center" class="bgWhite">
+                                <p>Synth-pop</p>
+                            </td>
+                            <td colspan="2" align="center" class="bgWhite">
+                                <p>Dark folk</p>
+                            </td>
+                            <td colspan="2" align="center" class="bgWhite">
+                                <p>DnB</p>
+                            </td>
+                            <td colspan="1" align="center"></td>
+                            <td colspan="1" align="center" class="bgWhite">
+                                <p>Alternatief</p>
+                            </td>
+                            <td colspan="1" align="center" class="bgWhite">
+                                <p>Neurofunk</p>
+                            </td>
+                            <td colspan="1" align="center"></td>
+                        </tr>
+
+                    </table>
+
+                    <br><button onclick="down()">Click to Close overlay</button>
+
+
+                </div>
+            </div>
+
+            <!-- achtergrond timetable om de overlay te kunnen fixen -->
+            <table border="0" cellspacing="0">
+
                 <tr>
-                    <td align="center" height="50">
-                        <b>Wednesday</b>
+                    <!-- Dit is niet zichtbaar. Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                </tr>
+
+                <tr>
+                    <!-- Hier worden de uren aangegeven boven de timetables -->
+                    <td class="tijdenTt" align="center" colspan="2">
+                        <b>18:00</b>
                     </td>
-                    <td align="center" height="50">Mat</td>
-                    <td align="center" height="50">phy</td>
-                    <td align="center" height="50">Eng</td>
-                    <td align="center" height="50">Che</td>
-                    <td colspan="3" align="center"
-                        height="50">LIBRARY
+                    <td class="tijdenTt" align="center" colspan="2">
+                        <b>19:00</b>
+                    </td>
+                    </td>
+                    <td class="tijdenTt" align="center" colspan="2">
+                        <b>20.00</b>
+                    </td>
+                    </td>
+                    <td class="tijdenTt" align="center" colspan="2">
+                        <b>21:00</b>
+                    </td>
+                    <td class="tijdenTt" align="center" colspan="2">
+                        <b>22:00</b>
+                    </td>
+                    </td>
+                    <td class="tijdenTt" align="center" colspan="2">
+                        <b>23:00</b>
+                    </td>
+                    </td>
+                    <td class="tijdenTt" align="center" colspan="2">
+                        <b>00:00</b>
                     </td>
                 </tr>
-                <tr class="bgGeel">
-                    <td colspan="1" align="center" height="30">
+
+                <tr class="bgOranjeHtc">
+                    <!-- Dit is de achtergrond van de persoonlijke timetable. Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
+                    <td class="borderSolid h200">
                     </td>
-                    <td colspan="2" align="center" height="30">
+                    <td class="borderDotted" height="250">
                     </td>
-                    <td colspan="2" align="center" height="30">
+                    <td class="borderSolid h200">
                     </td>
-                    <td colspan="2" align="center" height="30">
+                    <td class="borderDotted h200">
                     </td>
-                    <td colspan="2" align="center" height="30">
+                    <td class="borderSolid h200">
                     </td>
-                    <td colspan="2" align="center" height="30">
+                    <td class="borderDotted h200">
                     </td>
-                    <td colspan="2" align="center" height="30">
+                    <td class="borderSolid h200">
                     </td>
+                    <td class="borderDotted h200">
+                    </td>
+                    <td class="borderSolid h200">
+                    </td>
+                    <td class="borderDotted h200">
+                    </td>
+                    <td class="borderSolid h200">
+                    </td>
+                    <td class="borderDotted h200">
+                    </td>
+                    <td class="borderSolid h200">
+                    </td>
+                    <td>
+                    </td>
+                    <td></td>
                 </tr>
-                
             </table>
-
-
-
+            <button onclick="up()">Overlay Up</button>
 
 
 
 
         </div>
 
-        <!-- <div class="fullTt">
 
-            <table border="5" cellspacing="0" align="center" class="bgDesign">
-         
-                <tr class="bgGeel">
-                    <td align="center" height="50"
-                        width="100"><br>
-                        <b>Day/Period</b></br>
-                    </td>
-                    <td align="center" height="50"
-                        width="100">
-                        <b>I<br>9:30-10:20</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="100">
-                        <b>II<br>10:20-11:10</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="100">
-                        <b>III<br>11:10-12:00</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="100">
-                        <b>12:00-12:40</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="100">
-                        <b>IV<br>12:40-1:30</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="100">
-                        <b>V<br>1:30-2:20</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="100">
-                        <b>VI<br>2:20-3:10</b>
-                    </td>
-                    <td align="center" height="50"
-                        width="100">
-                        <b>VII<br>3:10-4:00</b>
-                    </td>
-                </tr>
-                <tr class="bgPaars">
-                    <td align="center" height="50">
-                        <b>Monday</b></td>
-                    <td align="center" height="50">Eng</td>
-                    <td align="center" height="50">Mat</td>
-                    <td align="center" height="50">Che</td>
-                    <td rowspan="6" align="center" height="50">
-                       
-                    </td>
-                    <td colspan="3" align="center"
-                        height="50">LAB</td>
-                    <td align="center" height="50">Phy</td>
-                </tr>
-                <tr class="bgRoze">
-                    <td align="center" height="50">
-                        <b>Tuesday</b>
-                    </td>
-                    <td colspan="3" align="center"
-                        height="50">LAB
-                    </td>
-                    <td align="center" height="50">Eng</td>
-                    <td align="center" height="50">Che</td>
-                    <td align="center" height="50">Mat</td>
-                    <td align="center" height="50">SPORTS</td>
-                </tr>
-                <tr>
-                    <td align="center" height="50">
-                        <b>Wednesday</b>
-                    </td>
-                    <td align="center" height="50">Mat</td>
-                    <td align="center" height="50">phy</td>
-                    <td align="center" height="50">Eng</td>
-                    <td align="center" height="50">Che</td>
-                    <td colspan="3" align="center"
-                        height="50">LIBRARY
-                    </td>
-                </tr>
-                <tr>
-                    <td align="center" height="50">
-                        <b>Thursday</b>
-                    </td>
-                    <td align="center" height="50">Phy</td>
-                    <td align="center" height="50">Eng</td>
-                    <td align="center" height="50">Che</td>
-                    <td colspan="3" align="center"
-                        height="50">LAB
-                    </td>
-                    <td align="center" height="50">Mat</td>
-                </tr>
-                <tr class="bgOranje">
-                    <td align="center" height="50">
-                        <b>Friday</b>
-                    </td>
-                    <td colspan="3" align="center"
-                        height="50">LAB
-                    </td>
-                    <td align="center" height="50">Mat</td>
-                    <td align="center" height="50">Che</td>
-                    <td align="center" height="50">Eng</td>
-                    <td align="center" height="50">Phy</td>
-                </tr>
-                <tr class="bgGrijs">
-                    <td align="center" height="50">
-                        <b>Saturday</b>
-                    </td>
-                    <td align="center" height="50">Eng</td>
-                    <td align="center" height="50">Che</td>
-                    <td align="center" height="50">Mat</td>
-                    <td colspan="3" align="center"
-                        height="50">SEMINAR
-                    </td>
-                    <td align="center" height="50">SPORTS</td>
-                </tr>
-            </table>
-        </div> -->
+
+        <!-- calculate duration of performance -->
+
+        <script>
+            function diff_minutes(dt2, dt1) {
+                var diff = (dt2.getTime() - dt1.getTime()) / 1000;
+                diff /= 60;
+                return Math.abs(Math.round(diff));
+            }
+
+            dt1 = new Date("June 20, 2022 11:11:00");
+            dt2 = new Date("June 20, 2022 12:10:00");
+            console.log(diff_minutes(dt1, dt2));
+        </script>
+
+        <!-- als de spotify geconnect is, plaats de beste opties. als die niet geconnect is laat dan de inlog button zien -->
 
 
     </div>
+
+    <br></br>
 
 </body>
 
