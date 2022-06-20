@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Personal timetable</title>
+
+    <style>
+        .content {
+            margin: 4%;
+        }
+
+        .header {
+            height: 110px;
+            background-image: linear-gradient(to right, #4B4E4A, #CD7454);
+
+            margin-top: -114px;
+        }
+
+        .headerLogo {
+            height: 110px;
+        }
+
+        .headerNav {
+            margin-left: 100px;
+            display: inline-block;
+        }
+
+        .headerNavContent {
+            margin-left: 5px;
+            padding-bottom: 25px;
+            padding-top: 15px;
+            padding-right: 30px;
+            padding-left: 25px;
+            background-color: white;
+            font-size: medium;
+        }
+
+        .headerTitle {
+            margin-left: 280px;
+            margin-bottom: 130px;
+            padding-bottom: 130px;
+            margin-top: 55px;
+            color: white;
+            font-size: xx-large;
+            display: inline-block;
+        }
+
+        .borderDotted {
+            border-right: 2px dotted black;
+        }
+
+        .borderSolid {
+            border-right: 2px solid black;
+        }
+
+        .h200 {
+            height: 200px;
+        }
+
+        .tijdenTt {
+            height: 20px;
+        }
+
+        .h1w50 {
+            height: 1px;
+            width: 50px;
+        }
+
+        .perKwartier {
+            height: 31px;
+            width: 25px;
+            border-right: 2px solid black;
+
+        }
+
+        .bgWhite {
+            background-color: white;
+        }
+
+        .bgOranjeHtc {
+            background-color: #CD7454;
+        }
+
+        .placeholder {
+            height: 30px;
+            margin: 10px;
+        }
+    </style>
+
+    <style>
+        #overlayCSS {
+            position: fixed;
+            /* display: none; */
+            background-color: rgba(255, 0, 200, 0.342);
+            opacity: 100%;
+        }
+
+        .content {
+            color: darkblue;
+        }
+
+        #overlayCSS2 {
+            position: fixed;
+            display: none;
+            height: 200px;
+            width: 750px;
+            background-color: cyan;
+            opacity: 50%;
+            cursor: default;
+        }
+
+        .content2 {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: darkblue;
+            margin: 100px;
+        }
+    </style>
+
+    <script>
+        function up() {
+            document.getElementById("overlayCSS").style.display = "block";
+        }
+
+        function down() {
+            document.getElementById("overlayCSS").style.display = "none";
+        }
+
+        function up2() {
+            document.getElementById("overlayCSS").style.display = "block";
+        }
+
+        function down2() {
+            document.getElementById("overlayCSS").style.display = "none";
+        }
+    </script>
+
+
+</head>
+
+<body>
+    <img src="hitthecityLofo.jpg" class="headerLogo">
+    <div class="header">
+
+        <h3 class="headerTitle">Timetables</h3>
+        <div class="headerNav">
+            <span class="headerNavContent">2021 &#x25BC; </span>
+            <span class="headerNavContent">FRIDAY OCT 15 </span>
+            <span class="headerNavContent">SATURDAY OCT 16</span>
+            <span class="headerNavContent">SUNDAY OCT 17</span>
+        </div>
+    </div>
+
+
+
+    <div class="content">
+        <h1>Friday October 15</h1>
+        <h2>personal timetable</h2>
+        <div>
+            <div>
+                <!-- achtergrond timetable zonder overlay -->
+                <table border="0" cellspacing="0">
+
+                    <tr>
+                        <!-- Dit is niet zichtbaar. Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                    </tr>
+
+                    <tr>
+                        <!-- Hier worden de uren aangegeven boven de timetables -->
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>18:00</b>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>19:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>20.00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>21:00</b>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>22:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>23:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>00:00</b>
+                        </td>
+                    </tr>
+
+                    <tr class="bgOranjeHtc">
+                        <!-- Dit is de achtergrond van de persoonlijke timetable. Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
+                        <td class="borderSolid h200">
+                        </td>
+                        <td class="borderDotted h200">
+                        </td>
+                        <td class="borderSolid h200">
+                        </td>
+                        <td class="borderDotted h200">
+                        </td>
+                        <td class="borderSolid h200">
+                        </td>
+                        <td class="borderDotted h200">
+                        </td>
+                        <td class="borderSolid h200">
+                        </td>
+                        <td class="borderDotted h200">
+                        </td>
+                        <td class="borderSolid h200">
+                        </td>
+                        <td class="borderDotted h200">
+                        </td>
+                        <td class="borderSolid h200">
+                        </td>
+                        <td class="borderDotted h200">
+                        </td>
+                        <td class="borderSolid h200">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+
+                <div id="overlayCSS2">
+                    <div class="content2">TEXT ON THE OVERLAY SCREEN
+                        <br><button onclick="down2()">Click to Close overlay</button>
+                    </div>
+                </div>
+                <h2>CLICK TO SEE OVERLAY</h2>
+                <button onclick="up2()">Overlay Up</button>
+            </div>
+
+            <br></br>
+
+
+            <div>
+
+                <div id="overlayCSS">
+
+                    <!-- de overlay zelf -->
+                    <table border="0" cellspacing="0">
+
+                        <tr>
+                            <!-- Dit is niet zichtbaar. Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                            <td class="perKwartier"></td>
+                        </tr>
+
+
+                        <tr height="50">
+                            <td class="bgWhite">
+                                <img src="placeholder-image.jpeg" class="placeholder">
+                            </td>
+                            <td colspan="2" align="center"></td>
+                            <td colspan="1" align="center" class="bgWhite">
+                                <img src="placeholder-image.jpeg" class="placeholder">
+                            </td>
+                            <td colspan="2" align="center" class="bgWhite">
+                                <img src="placeholder-image.jpeg" class="placeholder">
+                            </td>
+                            <td colspan="2" align="center" class="bgWhite">
+                                <img src="placeholder-image.jpeg" class="placeholder">
+                            </td>
+                            <td colspan="2" align="center"></td>
+                            <td colspan="2" align="center"></td>
+                            <td colspan="2" align="center"></td>
+                            <td colspan="1" align="center"></td>
+
+                        </tr>
+                        <tr height="50">
+                            <td colspan="1" align="center" class="bgWhite">
+                                <p>Max Frimout</p>
+                            </td>
+                            <td colspan="2" align="center" class="PTtLeeg"></td>
+                            <td colspan="1" align="center" class="bgWhite">
+                                <p>De Witte Kunst</p>
+                            </td>
+                            <td colspan="2" align="center" class="bgWhite">
+                                <p>Commander Spoon</p>
+                            </td>
+                            <td colspan="2" align="center" class="bgWhite">
+                                <p>NCT</p>
+                            </td>
+                            <td colspan="2" align="center"></td>
+                            <td colspan="1" align="center"></td>
+                        </tr>
+
+                        <tr height="40">
+                            <!-- hier staat een genre van het artiesten blok -->
+                            <td colspan="1" align="center" class="bgWhite">
+                                <p>Dance</p>
+                            </td>
+                            <td colspan="2" align="center" class="PTtLeeg"></td>
+                            <td colspan="1" align="center" class="bgWhite">
+                                <p>Synth-pop</p>
+                            </td>
+                            <td colspan="2" align="center" class="bgWhite">
+                                <p>Dark folk</p>
+                            </td>
+                            <td colspan="2" align="center" class="bgWhite">
+                                <p>DnB</p>
+                            </td>
+                            <td colspan="1" align="center"></td>
+                            <td colspan="1" align="center" class="bgWhite">
+                                <p>Alternatief</p>
+                            </td>
+                            <td colspan="1" align="center" class="bgWhite">
+                                <p>Neurofunk</p>
+                            </td>
+                            <td colspan="1" align="center"></td>
+                        </tr>
+
+                    </table>
+
+                    <br><button onclick="down()">Click to Close overlay</button>
+
+
+                </div>
+            </div>
+
+            <!-- achtergrond timetable om de overlay te kunnen fixen -->
+            <table border="0" cellspacing="0">
+
+                <tr>
+                    <!-- Dit is niet zichtbaar. Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                    <td class="h1w50"></td>
+                </tr>
+
+                <tr>
+                    <!-- Hier worden de uren aangegeven boven de timetables -->
+                    <td class="tijdenTt" align="center" colspan="2">
+                        <b>18:00</b>
+                    </td>
+                    <td class="tijdenTt" align="center" colspan="2">
+                        <b>19:00</b>
+                    </td>
+                    </td>
+                    <td class="tijdenTt" align="center" colspan="2">
+                        <b>20.00</b>
+                    </td>
+                    </td>
+                    <td class="tijdenTt" align="center" colspan="2">
+                        <b>21:00</b>
+                    </td>
+                    <td class="tijdenTt" align="center" colspan="2">
+                        <b>22:00</b>
+                    </td>
+                    </td>
+                    <td class="tijdenTt" align="center" colspan="2">
+                        <b>23:00</b>
+                    </td>
+                    </td>
+                    <td class="tijdenTt" align="center" colspan="2">
+                        <b>00:00</b>
+                    </td>
+                </tr>
+
+                <tr class="bgOranjeHtc">
+                    <!-- Dit is de achtergrond van de persoonlijke timetable. Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
+                    <td class="borderSolid h200">
+                    </td>
+                    <td class="borderDotted" height="250">
+                    </td>
+                    <td class="borderSolid h200">
+                    </td>
+                    <td class="borderDotted h200">
+                    </td>
+                    <td class="borderSolid h200">
+                    </td>
+                    <td class="borderDotted h200">
+                    </td>
+                    <td class="borderSolid h200">
+                    </td>
+                    <td class="borderDotted h200">
+                    </td>
+                    <td class="borderSolid h200">
+                    </td>
+                    <td class="borderDotted h200">
+                    </td>
+                    <td class="borderSolid h200">
+                    </td>
+                    <td class="borderDotted h200">
+                    </td>
+                    <td class="borderSolid h200">
+                    </td>
+                    <td>
+                    </td>
+                    <td></td>
+                </tr>
+            </table>
+            <button onclick="up()">Overlay Up</button>
+
+
+
+
+        </div>
+
+
+
+        <!-- calculate duration of performance -->
+
+        <script>
+            function diff_minutes(dt2, dt1) {
+                var diff = (dt2.getTime() - dt1.getTime()) / 1000;
+                diff /= 60;
+                return Math.abs(Math.round(diff));
+            }
+
+            dt1 = new Date("June 20, 2022 11:11:00");
+            dt2 = new Date("June 20, 2022 12:10:00");
+            console.log(diff_minutes(dt1, dt2));
+        </script>
+
+        <!-- als de spotify geconnect is, plaats de beste opties. als die niet geconnect is laat dan de inlog button zien -->
+
+
+    </div>
+
+    <br></br>
+
+</body>
+
+</html>
