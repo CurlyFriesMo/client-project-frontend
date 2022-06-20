@@ -19,25 +19,27 @@
 .artistinfo{
     width: 65%;
     margin-right: 6em;
+    background: rgb(232,181,186);
+background: linear-gradient(90deg, rgba(232,181,186,1) 0%, rgba(206,117,85,1) 100%);
 }
 
 .personaltt{
     width:1250px;
     height:350px;
     background-color: rgb(205, 116, 84);
-    /* display: none; */
+    display: none;
 }
 
 .fulltt{
     width:1250px;
     height: 350px;
     background-color: rgb(255, 209, 214);
-    /* display: none; */
+    display: none;
 }
 
 .artistinfo{
 width: 570px;
-height: 700px;
+height: 820px;
 background-color: rgb(255, 209, 214);
 }
 
@@ -65,8 +67,14 @@ background-color: rgb(255, 209, 214);
 
 .photo {
     height: 200px;
-    background:url(../img/maxfrimout.jpg) right no-repeat;   
+    background-image:url(../img/maxfrimout.jpg);
+    background-repeat: no-repeat;
+    background-position: right;
+    background-color: rgb(232,181,186);
+    background-color: linear-gradient(270deg, rgba(232,181,186,0.8799894957983193) 0%, rgba(254,208,213,1) 94%);
+
 }
+
 .otherartists{
 height: 180px;
 }
@@ -85,4 +93,10 @@ height: 180px;
     align-items: center;
     justify-content: center;
     background-color: black;
+}
+
+.spotify {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
 }
