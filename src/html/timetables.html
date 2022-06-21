@@ -16,7 +16,7 @@
     <style>
         .content {
             margin: 4%;
-            margin-top: 150px;
+            margin-top: 120px;
         }
 
         .font1 {
@@ -27,13 +27,12 @@
             font-family: 'Staatliches', cursive;
         }
 
-        .font3 {
-            font-family: 'Quicksand', sans-serif;
-        }
-
         .venueFullTt {
             font-family: 'Quicksand', sans-serif;
             padding-left: 15px;
+            padding-top: 0px;
+            padding-bottom: 0px;
+            margin: 0px 0px 0px 0px;
         }
 
         .day {
@@ -44,10 +43,14 @@
             color: #4B4E4A;
         }
 
+        table {
+            margin-top: -3px;
+        }
+
         .header {
-            height: 110px;
+            height: 100px;
             background-image: linear-gradient(to right, #4B4E4A, #CD7454);
-            margin-top: -114px;
+            margin-top: -104px;
             width: 100%;
         }
 
@@ -59,7 +62,7 @@
         }
 
         .headerLogo {
-            height: 110px;
+            height: 100px;
         }
 
         .headerNav {
@@ -108,7 +111,7 @@
 
         .headerTitle {
             margin-left: 290px;
-            margin-top: 60px;
+            margin-top: 50px;
             color: white;
             font-size: xx-large;
             display: inline-block;
@@ -123,8 +126,8 @@
             border-right: 2px solid #4B4E4A;
         }
 
-        .h200 {
-            height: 200px;
+        .h180 {
+            height: 180px;
         }
 
         .tijdenTt {
@@ -136,7 +139,6 @@
 
         .zesuur {
             padding-left: 140px;
-            ;
         }
 
         .h1w50 {
@@ -160,10 +162,6 @@
             background-color: white;
         }
 
-        .placeholder {
-            height: 30px;
-            margin: 10px;
-        }
 
         .bgOranjeHtc {
             background-color: #CD7454;
@@ -173,24 +171,36 @@
             background-color: #FFD1D6;
         }
 
-        #overlayCSS {
-            position: absolute;
-            background-color: rgba(255, 0, 200, 0.342);
-            opacity: 100%;
-        }
-
         .fullTt {
             margin-top: 45px;
         }
 
-        #blokTest1 {
+        .blokArtistPersonal {
             background-color: white;
             height: 160px;
             position: absolute;
             border: 1px solid #4B4E4A;
-            text-align: center;
-            font-size: 13px;
+            font-size: 12px;
+        }
+
+        .blokArtistFull {
+            background-color: #EDE5DF;
+            border: 1px solid #A3A3A3;
+            height: 32px;
+            position: absolute;
             font-family: 'Quicksand', sans-serif;
+            font-size: 10px;
+            text-align: center;
+            padding-left: 2px;
+            padding-right: 2px;
+        }
+
+        #blokArtist1Personal {
+            visibility: visible;
+        }
+
+        #blokArtist1Full {
+            visibility: visible;
         }
 
         .placeholder1 {
@@ -204,6 +214,8 @@
         .bloktekst {
             padding-top: 10px;
             padding-bottom: 10px;
+            font-family: 'Quicksand', sans-serif;
+            text-align: center;
         }
     </style>
 
@@ -230,14 +242,20 @@
         <h2 class="font2 grey">personal timetable</h2>
         <div>
 
-            <div id="blokTest1">
+            <div class="blokArtistPersonal" id="blokArtist1Personal">
                 <img src="placeholder-image.jpeg" class="placeholder1">
-                <p class="bloktekst" id="artistname1">Artist name</p>
-                <p class="bloktekst" id="genre1">Venue</p>
+                <p class="bloktekst artistname1">Artist name</p>
+                <p class="bloktekst" id="genre1">Genre</p>
+            </div>
+
+            <div class="blokArtistPersonal" id="blokArtist2Personal">
+                <img src="placeholder-image.jpeg" class="placeholder1">
+                <p class="bloktekst artistname2">Artist name</p>
+                <p class="bloktekst" id="genre2">Genre</p>
             </div>
 
             <!-- De persoonlijke timetable -->
-            <table border="0" cellspacing="0" class="zindex">
+            <table border="0" cellspacing="0">
 
                 <tr>
                     <!-- Dit is niet zichtbaar. 
@@ -290,31 +308,31 @@
                 <tr class="bgOranjeHtc">
                     <!-- Dit is de achtergrond van de persoonlijke timetable. 
                         Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
-                    <td class="borderSolid h200">
+                    <td class="borderSolid h180">
                     </td>
-                    <td class="borderDotted h200">
+                    <td class="borderDotted h180">
                     </td>
-                    <td class="borderSolid h200">
+                    <td class="borderSolid h180">
                     </td>
-                    <td class="borderDotted h200">
+                    <td class="borderDotted h180">
                     </td>
-                    <td class="borderSolid h200">
+                    <td class="borderSolid h180">
                     </td>
-                    <td class="borderDotted h200">
+                    <td class="borderDotted h180">
                     </td>
-                    <td class="borderSolid h200">
+                    <td class="borderSolid h180">
                     </td>
-                    <td class="borderDotted h200">
+                    <td class="borderDotted h180">
                     </td>
-                    <td class="borderSolid h200">
+                    <td class="borderSolid h180">
                     </td>
-                    <td class="borderDotted h200">
+                    <td class="borderDotted h180">
                     </td>
-                    <td class="borderSolid h200">
+                    <td class="borderSolid h180">
                     </td>
-                    <td class="borderDotted h200">
+                    <td class="borderDotted h180">
                     </td>
-                    <td class="borderSolid h200">
+                    <td class="borderSolid h180">
                     </td>
                     <td>
                     </td>
@@ -329,7 +347,15 @@
         <div class="fullTt">
             <h2 class="font2 grey">full timetable</h2>
 
-            <table border="0" cellspacing="0" class="zindex">
+            <div class="blokArtistFull" id="blokArtist1Full">
+                <p class="artistname1">Artist name</p>
+            </div>
+
+            <div class="blokArtistFull" id="blokArtist2Full">
+                <p class="artistname2">Artist name</p>
+            </div>
+
+            <table border="0" cellspacing="0">
 
                 <tr>
                     <!-- Dit is niet zichtbaar. Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
@@ -381,32 +407,32 @@
                 <tr class="bgRozeHtc">
                     <!-- Dit is de achtergrond van de persoonlijke timetable. 
                         Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                         <p class="venueFullTt">Effenaar</p>
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
                     <td>
                     </td>
@@ -415,32 +441,32 @@
                 <tr class="bgOranjeHtc">
                     <!-- Dit is de achtergrond van de persoonlijke timetable. 
                         Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                         <p class="venueFullTt">Subbar</p>
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
                     <td>
                     </td>
@@ -449,32 +475,32 @@
                 <tr class="bgRozeHtc">
                     <!-- Dit is de achtergrond van de persoonlijke timetable. 
                         Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                         <p class="venueFullTt">Stroomhuis</p>
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
                     <td>
                     </td>
@@ -483,32 +509,32 @@
                 <tr class="bgOranjeHtc">
                     <!-- Dit is de achtergrond van de persoonlijke timetable. 
                         Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                         <p class="venueFullTt">Fifth</p>
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
                     <td>
                     </td>
@@ -517,32 +543,32 @@
                 <tr class="bgRozeHtc">
                     <!-- Dit is de achtergrond van de persoonlijke timetable. 
                         Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                         <p class="venueFullTt">Dynamo</p>
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
                     <td>
                     </td>
@@ -551,32 +577,32 @@
                 <tr class="bgOranjeHtc">
                     <!-- Dit is de achtergrond van de persoonlijke timetable. 
                         Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                         <p class="venueFullTt">Altstadt</p>
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
-                    <td class="borderDotted" height="40">
+                    <td class="borderDotted" height="35">
                     </td>
-                    <td class="borderSolid" height="40">
+                    <td class="borderSolid" height="35">
                     </td>
                     <td>
                     </td>
@@ -588,19 +614,42 @@
 </body>
 
 <script>
+// 20 artists op vrijdag
+
+
     // handmatig invoeren per artiest
-    // artiest 1 (starttijd, eindtijd, datum)
+    // artiest 1 (starttijd, eindtijd, datum, artiestennaam, genre, venue)
     var start1 = "20:00";
     var end1 = "21:00";
     var day1 = new Date("10/15/2021");
-    document.getElementById("artistname1").innerHTML = "Commander Spoon";
+    var artistname1 = document.getElementsByClassName('artistname1');
+        for (var i = 0; i < artistname1.length; i++) {
+            artistname1[i].innerHTML = "Commander Spoon";
+        }
     document.getElementById("genre1").innerHTML = "Dark folk";
+    var venueArtist1 = 5;
+    // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
+
+    var blokArtist1Personal = document.getElementById("blokArtist1Personal");
+    var blokArtist1Full = document.getElementById("blokArtist1Full");
 
 
-
-
-    var blokTest1;
-    blokTest1 = document.getElementById("blokTest1");
+    //Zorgen dat de artiesten in de full timetable bij de goede venue staan
+    if (venueArtist1 == 1) {
+        blokArtist1Full.style.marginTop = "24px";
+    } else if (venueArtist1 == 2) {
+        blokArtist1Full.style.marginTop = "61px";
+    }else if (venueArtist1 == 3) {
+        blokArtist1Full.style.marginTop = "98px";
+    } else if (venueArtist1 == 4) {
+        blokArtist1Full.style.marginTop = "135px";
+    } else if (venueArtist1 == 5) {
+        blokArtist1Full.style.marginTop = "172px";
+    } else if (venueArtist1 == 6) {
+        blokArtist1Full.style.marginTop = "209px";
+    } else {
+        console.write("error venue");
+    }
 
     start1 = start1.split(":");
     end1 = end1.split(":");
@@ -623,71 +672,146 @@
     }
     console.log(diff(start1, end1));
 
-    //width van blok: duration of performance
-    if (diff(start1, end1) < 31) {
-        blokTest1.style.width = "50px";
-    } else if (diff(start1, end1) < 46) {
-        blokTest1.style.width = "75px";
-    } else if (diff(start1, end1) < 61) {
-        blokTest1.style.width = "100px";
-    } else if (diff(start1, end1) < 76) {
-        blokTest1.style.width = "125px";
-    } else if (diff(start1, end1) < 91) {
-        blokTest1.style.width = "150px";
-    } else if (diff(start1, end1) < 121) {
-        blokTest1.style.width = "175px";
-    } else if (diff(start1, end1) < 121) {
-        blokTest1.style.width = "200px";
-    } else {
-        console.log("error width");
-    }
-
+    // how long does the performance take? set the width
+    var widthArtist1 = diff(start1, end1) / 6 * 10;
+    blokArtist1Personal.style.width = widthArtist1 + "px";
+    blokArtist1Full.style.width = (widthArtist1 - 7) + "px";
 
     //spot on the timeline: when does the performance start?
-    var marginLeftArtist1 = ((((start1[0] - 18) * 60) + start1[1]) / 60) + 150;
-    console.log(marginLeftArtist1);
+    var marginLeftArtist1 = ((((start1[0] - 18) * 60)) / 6 * 10) + (start1[1] / 6 * 10 ) + 150;
+    blokArtist1Personal.style.marginLeft = marginLeftArtist1 + "px";
+    blokArtist1Full.style.marginLeft = (marginLeftArtist1 + 1) + "px";
 
-    if (marginLeftArtist1 == 150) {
-        blokTest1.style.marginLeft = "150px";
-    } else if (marginLeftArtist1 == 175) {
-        blokTest1.style.marginLeft = "175px";
-    } else if (marginLeftArtist1 == 200) {
-        blokTest1.style.marginLeft = "200px";
-    } else if (marginLeftArtist1 == 225) {
-        blokTest1.style.marginLeft = "225px";
-    } else if (marginLeftArtist1 == 250) {
-        blokTest1.style.marginLeft = "250px";
-    } else if (marginLeftArtist1 == 275) {
-        blokTest1.style.marginLeft = "275px";
-    } else if (marginLeftArtist1 == 300) {
-        blokTest1.style.marginLeft = "300px";
-    } else if (marginLeftArtist1 == 325) {
-        blokTest1.style.marginLeft = "325px";
-    } else if (marginLeftArtist1 == 350) {
-        blokTest1.style.marginLeft = "350px";
-    } else if (marginLeftArtist1 == 750) {
-        blokTest1.style.marginLeft = "750px";
-    } else {
-        console.log("error margin");
-    }
-
-    // To calculate the time difference of two dates: in which timetable does it have to be
+    // To calculate the time difference of two dates: in which timetable does it have to be?
+    // de laatste dag van het festival om te kunnen vergelijken:
     var day0 = new Date("10/17/2021");
 
     var Difference_In_Time = day1.getTime() - day0.getTime();
     var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
     if (Difference_In_Days == -2) {
         //its friday
-        blokTest1.style.marginTop = "40px";
+        blokArtist1Personal.style.marginTop = "40px";
     } else if (Difference_In_Days == -1) {
         //its saturday
-        blokTest1.style.marginTop = "250px";
+        blokArtist1Personal.style.marginTop = "250px";
     } else if (Difference_In_Days == 0) {
         //its sunday
-        blokTest1.style.marginTop = "350px";
+        blokArtist1Personal.style.marginTop = "350px";
     } else {
         console.log("error days");
     }
+
+
+
+
+
+
+
+    // Artist 2
+    var start2 = "18:00";
+    var end2 = "18:30";
+    // var day1 = new Date("10/15/2021");
+    var artistname2 = document.getElementsByClassName('artistname2');
+        for (var i = 0; i < artistname2.length; i++) {
+            artistname2[i].innerHTML = "Max Frimout";
+        }
+    document.getElementById("genre2").innerHTML = "Dance";
+    var venueArtist2 = 2;
+    // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
+
+    var blokArtist2Personal = document.getElementById("blokArtist2Personal");
+    var blokArtist2Full = document.getElementById("blokArtist2Full");
+
+
+    if (venueArtist2 == 1) {
+        blokArtist2Full.style.marginTop = "24px";
+    } else if (venueArtist2 == 2) {
+        blokArtist2Full.style.marginTop = "61px";
+    }else if (venueArtist2 == 3) {
+        blokArtist2Full.style.marginTop = "98px";
+    } else if (venueArtist2 == 4) {
+        blokArtist2Full.style.marginTop = "135px";
+    } else if (venueArtist2 == 5) {
+        blokArtist2Full.style.marginTop = "172px";
+    } else if (venueArtist2 == 6) {
+        blokArtist2Full.style.marginTop = "209px";
+    } else {
+        console.write("error venue");
+    }
+
+    start2 = start2.split(":");
+    end2 = end2.split(":");
+
+    function diff(start2, end2) {
+
+        var start2Date = new Date(0, 0, 0, start2[0], start2[1], 0);
+        var end2Date = new Date(0, 0, 0, end2[0], end2[1], 0);
+        var diff = end2Date.getTime() - start2Date.getTime();
+        var hours = Math.floor(diff / 1000 / 60 / 60);
+        diff -= hours * 1000 * 60 * 60;
+        var minutes = Math.floor(diff / 1000 / 60);
+
+        var totalMinutes2 = (hours * 60) + minutes;
+
+        if (hours < 0)
+            hours = hours + 24;
+
+        return totalMinutes2
+    }
+
+    var widthArtist2 = diff(start2, end2) / 6 * 10;
+    blokArtist2Personal.style.width = widthArtist2 + "px";
+    blokArtist2Full.style.width = (widthArtist2 - 7) + "px";
+
+    var marginLeftArtist2 = ((((start2[0] - 18) * 60)) / 6 * 10) + (start2[1] / 6 * 10 ) + 150;
+    blokArtist2Personal.style.marginLeft = marginLeftArtist2 + "px";
+    blokArtist2Full.style.marginLeft = (marginLeftArtist2 + 1) + "px";
+
+    // var day0 = new Date("10/17/2021");
+
+    // var Difference_In_Time = day1.getTime() - day0.getTime();
+    // var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
+    // if (Difference_In_Days == -2) {
+    //     //its friday
+    //     blokArtist1Personal.style.marginTop = "40px";
+    // } else if (Difference_In_Days == -1) {
+    //     //its saturday
+    //     blokArtist1Personal.style.marginTop = "250px";
+    // } else if (Difference_In_Days == 0) {
+    //     //its sunday
+    //     blokArtist1Personal.style.marginTop = "350px";
+    // } else {
+    //     console.log("error days");
+    // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </script>
 
 </html>

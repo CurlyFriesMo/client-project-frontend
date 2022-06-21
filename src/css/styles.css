@@ -71,23 +71,36 @@ background-color: rgb(255, 209, 214);
 
     margin-right: 30px;
     font-size: 20px;
+    font-family: 'Montserrat', sans-serif;
+    color: #4B4E4A;
 }
+
+
 
 .artistname{
 margin-left: 40px;
+font-family: 'Sorts Mill Goudy', serif;
+color: #CD7454;
 }
 
 .artistgenre{
 margin-left: 40px;
+font-family: 'Staatliches', cursive;
+color: #4B4E4A;
 }
 
 .artistdesc{
     text-align: center;
-    font-size: 20px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+            color: #4B4E4A;
+  
 }
 
 .details{
-    font-size: 26px;
+    font-size: 24px;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
 }
 
 .topsection{
@@ -126,6 +139,10 @@ height: 180px;
     width: 32%;
     display: inline-block;
     text-align: center;
+    font-family: 'Montserrat', sans-serif;
+            color: #4B4E4A;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .spotifytracks {
