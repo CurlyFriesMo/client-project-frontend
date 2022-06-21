@@ -1,0 +1,10 @@
+.content{
+    display: flex;
+    flex-direction: row;
+}
+
+.artistinfo{
+    width: 40%;
+    margin-left: 50px;
+    margin-top: 160px;
+}

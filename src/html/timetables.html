@@ -11,6 +11,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Sorts+Mill+Goudy&display=swap"
         rel="stylesheet">
 
+    <link href="../css/styles.css" rel="stylesheet">
+    <link href="../css/main.css" rel="stylesheet">
+
     <script src="../javascript/getInfo.js"></script>
 
     <style>
@@ -218,11 +221,9 @@
             text-align: center;
         }
     </style>
-
 </head>
 
 <body>
-
     <!-- De header -->
     <div class="headerfully">
         <img src="hitthecityLofo.jpg" class="headerLogo">
@@ -238,381 +239,416 @@
     </div>
 
     <div class="content">
-        <h1 class="font1 day">Friday October 15</h1>
-        <h2 class="font2 grey">personal timetable</h2>
-        <div>
+        <div id="timetables">
+            <div id="personalTimetable">
+                <h1 class="font1 day">Friday October 15</h1>
+                <h2 class="font2 grey">personal timetable</h2>
+                <div>
+                    <div class="blokArtistPersonal" id="blokArtist1Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname1">Artist name</p>
+                        <p class="bloktekst" id="genre1">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal" id="blokArtist2Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname2">Artist name</p>
+                        <p class="bloktekst" id="genre2">Genre</p>
+                    </div>
+                    <!-- De persoonlijke timetable -->
+                    <table border="0" cellspacing="0">
 
-            <div class="blokArtistPersonal" id="blokArtist1Personal">
-                <img src="placeholder-image.jpeg" class="placeholder1">
-                <p class="bloktekst artistname1">Artist name</p>
-                <p class="bloktekst" id="genre1">Genre</p>
+                        <tr>
+                            <!-- Dit is niet zichtbaar.
+                                Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
+                            <td height="1px" width="150px"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                        </tr>
+
+                        <tr>
+                            <!-- Hier worden de uren aangegeven boven de timetables -->
+                            <td class="tijdenTt zesuur" colspan="2">
+                                <b>18:00</b>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>19:00</b>
+                            </td>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>20.00</b>
+                            </td>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>21:00</b>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>22:00</b>
+                            </td>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>23:00</b>
+                            </td>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>00:00</b>
+                            </td>
+                        </tr>
+
+                        <tr class="bgOranjeHtc">
+                            <!-- Dit is de achtergrond van de persoonlijke timetable.
+                                Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
+            <div class="fullTt">
+                <h2 class="font2 grey">full timetable</h2>
 
-            <div class="blokArtistPersonal" id="blokArtist2Personal">
-                <img src="placeholder-image.jpeg" class="placeholder1">
-                <p class="bloktekst artistname2">Artist name</p>
-                <p class="bloktekst" id="genre2">Genre</p>
+                <div class="blokArtistFull" id="blokArtist1Full">
+                    <p class="artistname1">Artist name</p>
+                </div>
+
+                <div class="blokArtistFull" id="blokArtist2Full">
+                    <p class="artistname2">Artist name</p>
+                </div>
+
+                <table border="0" cellspacing="0">
+
+                    <tr>
+                        <!-- Dit is niet zichtbaar. Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
+                        <td height="1" width="150"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                    </tr>
+
+                    <tr>
+                        <!-- Hier worden de uren aangegeven boven de timetables -->
+                        <td class="tijdenTt zesuur" colspan="2">
+                            <b>18:00</b>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>19:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>20.00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>21:00</b>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>22:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>23:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>00:00</b>
+                        </td>
+                    </tr>
+
+                    <tr class="bgRozeHtc">
+                        <!-- Dit is de achtergrond van de persoonlijke timetable.
+                            Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Effenaar</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgOranjeHtc">
+                        <!-- Dit is de achtergrond van de persoonlijke timetable.
+                            Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Subbar</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgRozeHtc">
+                        <!-- Dit is de achtergrond van de persoonlijke timetable.
+                            Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Stroomhuis</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgOranjeHtc">
+                        <!-- Dit is de achtergrond van de persoonlijke timetable.
+                            Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Fifth</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgRozeHtc">
+                        <!-- Dit is de achtergrond van de persoonlijke timetable.
+                            Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Dynamo</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgOranjeHtc">
+                        <!-- Dit is de achtergrond van de persoonlijke timetable.
+                            Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Altstadt</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
             </div>
-
-            <!-- De persoonlijke timetable -->
-            <table border="0" cellspacing="0">
-
-                <tr>
-                    <!-- Dit is niet zichtbaar. 
-                        Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
-                    <td height="1px" width="150px"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                </tr>
-
-                <tr>
-                    <!-- Hier worden de uren aangegeven boven de timetables -->
-                    <td class="tijdenTt zesuur" colspan="2">
-                        <b>18:00</b>
-                    </td>
-                    <td class="tijdenTt" align="center" colspan="2">
-                        <b>19:00</b>
-                    </td>
-                    </td>
-                    <td class="tijdenTt" align="center" colspan="2">
-                        <b>20.00</b>
-                    </td>
-                    </td>
-                    <td class="tijdenTt" align="center" colspan="2">
-                        <b>21:00</b>
-                    </td>
-                    <td class="tijdenTt" align="center" colspan="2">
-                        <b>22:00</b>
-                    </td>
-                    </td>
-                    <td class="tijdenTt" align="center" colspan="2">
-                        <b>23:00</b>
-                    </td>
-                    </td>
-                    <td class="tijdenTt" align="center" colspan="2">
-                        <b>00:00</b>
-                    </td>
-                </tr>
-
-                <tr class="bgOranjeHtc">
-                    <!-- Dit is de achtergrond van de persoonlijke timetable. 
-                        Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
-                    <td class="borderSolid h180">
-                    </td>
-                    <td class="borderDotted h180">
-                    </td>
-                    <td class="borderSolid h180">
-                    </td>
-                    <td class="borderDotted h180">
-                    </td>
-                    <td class="borderSolid h180">
-                    </td>
-                    <td class="borderDotted h180">
-                    </td>
-                    <td class="borderSolid h180">
-                    </td>
-                    <td class="borderDotted h180">
-                    </td>
-                    <td class="borderSolid h180">
-                    </td>
-                    <td class="borderDotted h180">
-                    </td>
-                    <td class="borderSolid h180">
-                    </td>
-                    <td class="borderDotted h180">
-                    </td>
-                    <td class="borderSolid h180">
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-            </table>
-
         </div>
+        <div class="artistinfo">
+        <div class="topsection">
 
-        <!-- full timetable -->
 
-        <div class="fullTt">
-            <h2 class="font2 grey">full timetable</h2>
+            <div class="right">
 
-            <div class="blokArtistFull" id="blokArtist1Full">
-                <p class="artistname1">Artist name</p>
+
+                <p class="details">
+                    HIGHEST MATCH</p>
             </div>
+            <div class="left">
 
-            <div class="blokArtistFull" id="blokArtist2Full">
-                <p class="artistname2">Artist name</p>
+                <p class="match"><i class="fa-solid fa-clock"></i>23:00-00:00 <i class="fa-solid fa-location-pin"></i>Effenaar</p>
+
             </div>
+        </div>
+        <div class="photo">
 
-            <table border="0" cellspacing="0">
 
-                <tr>
-                    <!-- Dit is niet zichtbaar. Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
-                    <td height="1" width="150"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                    <td class="h1w50"></td>
-                </tr>
 
-                <tr>
-                    <!-- Hier worden de uren aangegeven boven de timetables -->
-                    <td class="tijdenTt zesuur" colspan="2">
-                        <b>18:00</b>
-                    </td>
-                    <td class="tijdenTt" align="center" colspan="2">
-                        <b>19:00</b>
-                    </td>
-                    </td>
-                    <td class="tijdenTt" align="center" colspan="2">
-                        <b>20.00</b>
-                    </td>
-                    </td>
-                    <td class="tijdenTt" align="center" colspan="2">
-                        <b>21:00</b>
-                    </td>
-                    <td class="tijdenTt" align="center" colspan="2">
-                        <b>22:00</b>
-                    </td>
-                    </td>
-                    <td class="tijdenTt" align="center" colspan="2">
-                        <b>23:00</b>
-                    </td>
-                    </td>
-                    <td class="tijdenTt" align="center" colspan="2">
-                        <b>00:00</b>
-                    </td>
-                </tr>
+            <h1 class="artistname">Max Frimout</h1>
+            <h2 class ="artistgenre">NEUROFUNK</h2>
+        </div>
+        <div class="otherartists">
 
-                <tr class="bgRozeHtc">
-                    <!-- Dit is de achtergrond van de persoonlijke timetable. 
-                        Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
-                    <td class="borderSolid" height="35">
-                        <p class="venueFullTt">Effenaar</p>
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr class="bgOranjeHtc">
-                    <!-- Dit is de achtergrond van de persoonlijke timetable. 
-                        Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
-                    <td class="borderSolid" height="35">
-                        <p class="venueFullTt">Subbar</p>
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr class="bgRozeHtc">
-                    <!-- Dit is de achtergrond van de persoonlijke timetable. 
-                        Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
-                    <td class="borderSolid" height="35">
-                        <p class="venueFullTt">Stroomhuis</p>
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr class="bgOranjeHtc">
-                    <!-- Dit is de achtergrond van de persoonlijke timetable. 
-                        Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
-                    <td class="borderSolid" height="35">
-                        <p class="venueFullTt">Fifth</p>
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr class="bgRozeHtc">
-                    <!-- Dit is de achtergrond van de persoonlijke timetable. 
-                        Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
-                    <td class="borderSolid" height="35">
-                        <p class="venueFullTt">Dynamo</p>
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-                <tr class="bgOranjeHtc">
-                    <!-- Dit is de achtergrond van de persoonlijke timetable. 
-                        Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
-                    <td class="borderSolid" height="35">
-                        <p class="venueFullTt">Altstadt</p>
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td class="borderDotted" height="35">
-                    </td>
-                    <td class="borderSolid" height="35">
-                    </td>
-                    <td>
-                    </td>
-                    <td></td>
-                </tr>
-            </table>
+            <p class="artistdesc">This artist sounds similar to some artists you love!</p>
+            <div class="otherartistpic">
+                <img src="../img/artp1-modified.png"><p>Angela olsen</p>
+            </div>
+            <div class="otherartistpic"><img src="../img/artp1-modified.png"><p>Angela olsen</p>
+            </div>
+            <div class="otherartistpic"><img src="../img/artp1-modified.png"><p>Angela olsen</p>
+
+            </div>
+        </div>
+        <div class="spotify">
+            <iframe style="border-radius:12px" src="https://open.spotify.com/embed/artist/4w7pwjdOFXrlfggOs52f4c?utm_source=generator" width="70%" height="240" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
         </div>
     </div>
+    </div>
 </body>
-
 <script>
 // 20 artists op vrijdag
 
