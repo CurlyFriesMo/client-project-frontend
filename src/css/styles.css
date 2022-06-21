@@ -1,4 +1,4 @@
-.main{
+.main {
     display: flex;
     flex-direction: row;
     margin: 1em 0;
@@ -31,7 +31,7 @@
     border-radius: 40px
 }
 
-.timetables{
+/* .timetables {
     flex: 1;
     display: flex;
     flex-direction: column;
@@ -39,70 +39,74 @@
     margin-left: 6em;
     padding-right: 1em;
     text-align: justify;
-  }
+} */
 
-.artistinfo{
-    width: 65%;
+.artistinfo {
+    /* width: 65%; */
     margin-right: 6em;
-    background: rgb(232,181,186);
-    background: linear-gradient(90deg, rgba(232,181,186,1) 0%, rgba(206,117,85,1) 100%);
+    background: rgb(232, 181, 186);
+    background: linear-gradient(90deg, rgba(232, 181, 186, 1) 0%, rgba(206, 117, 85, 1) 100%);
+    /* width: 40%; */
+    margin-left: 50px;
+    width: 560px;
+    height: 655px;
+    background-color: rgb(255, 209, 214);
+    margin-top: 30px;
 }
 
-.personaltt{
-    width:1250px;
-    height:350px;
+.personaltt {
+    width: 1250px;
+    height: 350px;
     background-color: rgb(205, 116, 84);
     display: none;
 }
 
-.fulltt{
-    width:1250px;
+.fulltt {
+    width: 1250px;
     height: 350px;
     background-color: rgb(255, 209, 214);
     display: none;
 }
 
-.artistinfo{
-    width: 570px;
-    height: 820px;
-    background-color: rgb(255, 209, 214);
-}
-
-.match{
+.match {
     margin-right: 30px;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Montserrat', sans-serif;
     color: #4B4E4A;
 }
 
-.artistname{
+.artistname {
     margin-left: 40px;
+    padding-top: 15px;
+    margin-bottom: 0px;
     font-family: 'Sorts Mill Goudy', serif;
     color: #CD7454;
 }
 
-.artistgenre{
+.artistgenre {
     margin-left: 40px;
+    margin-top: 0px;
     font-family: 'Staatliches', cursive;
     color: #4B4E4A;
 }
 
-.artistdesc{
+.artistdesc {
     text-align: center;
-    font-size: 18px;
+    font-size: 17px;
     font-family: 'Montserrat', sans-serif;
     color: #4B4E4A;
 }
 
-.details{
-    font-size: 24px;
+.details {
+    font-size: 21px;
     font-family: 'Montserrat', sans-serif;
     color: white;
 }
 
-.topsection{
-    height: 100px;
+.topsection {
+    height: 45px;
     text-align: center;
+    margin-left: 10px;
 }
 
 .right {
@@ -118,27 +122,37 @@
 }
 
 .photo {
-    height: 200px;
-    background-image:url(../img/maxfrimout.jpg);
+    height: 170px;
+    background-image: url(../img/maxfrimout.jpg);
     background-repeat: no-repeat;
     background-position: right;
-    background-color: rgb(232,181,186);
-    background-color: linear-gradient(270deg, rgba(232,181,186,0.8799894957983193) 0%, rgba(254,208,213,1) 94%);
+    background-color: rgb(232, 181, 186);
+    background-color: linear-gradient(270deg, rgba(232, 181, 186, 0.8799894957983193) 0%, rgba(254, 208, 213, 1) 94%);
 }
 
-.otherartists{
-    height: 180px;
+.otherartists {
+    height: 170px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-.otherartistpic{
-    height: 80px;
-    width: 32%;
+.otherartistpic {
     display: inline-block;
     text-align: center;
     font-family: 'Montserrat', sans-serif;
     color: #4B4E4A;
     font-size: 14px;
     font-weight: 600;
+    margin-left: 45px;
+}
+
+.otherartistpics {
+    height: 60px;
+}
+
+.oap {
+    padding-top: 0px;
+    margin-top: 5px;
 }
 
 .spotifytracks {
@@ -161,15 +175,9 @@
     flex-direction: row;
 }
 
-.artistinfo {
-    width: 40%;
-    margin-left: 50px;
-    margin-top: 160px;
-}
-
 .content {
     margin: 4%;
-    margin-top: 120px;
+    margin-top: 130px;
 }
 
 .font1 {
@@ -351,6 +359,14 @@ table {
 }
 
 #blokArtist1Full {
+    visibility: visible;
+}
+
+#blokArtist2Personal {
+    visibility: visible;
+}
+
+#blokArtist2Full {
     visibility: visible;
 }
 
