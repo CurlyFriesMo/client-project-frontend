@@ -384,3 +384,11 @@ table {
     font-family: 'Quicksand', sans-serif;
     text-align: center;
 }
+
+.bloktekstGenre {
+    margin-bottom: 0px;
+    width: 100%;
+    bottom: 0px;
+    position: absolute;
+    border-top: 1px solid #4b4e4a3f;
+}
