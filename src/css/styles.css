@@ -67,10 +67,28 @@ height: 820px;
 background-color: rgb(255, 209, 214);
 }
 
-/* .match{
-    text-align: right;
-    margin-right: 15px;
-} */
+.match{
+
+    margin-right: 30px;
+    font-size: 20px;
+}
+
+.artistname{
+margin-left: 40px;
+}
+
+.artistgenre{
+margin-left: 40px;
+}
+
+.artistdesc{
+    text-align: center;
+    font-size: 20px;
+}
+
+.details{
+    font-size: 26px;
+}
 
 .topsection{
     height: 100px;
@@ -103,7 +121,7 @@ background-color: rgb(255, 209, 214);
 height: 180px;
 }
 .otherartistpic{
-    background:url(../img/angolsen.jpg) center no-repeat;
+    
     height: 80px;
     width: 32%;
     display: inline-block;
