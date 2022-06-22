@@ -37,10 +37,8 @@
         .movingBorder {
             --angle: 0deg;
             border: 5px solid;
-            /* border-image: linear-gradient(var(--angle), #12c2e9, #c471ed, #f64f59) 1; */
             border-image: linear-gradient(var(--angle), #8CFBDE, #FF99A5, #7D80DA) 1;
             animation: 5s rotate linear infinite;
-            visibility: visible;
         }
 
         .blokArtistpersonalx {
@@ -51,40 +49,47 @@
             font-size: 12px;
         }
 
+        .photo2 {
+            height: 170px;
+            background-image: url("../img/maxfrimout.jpg");
+            background-repeat: no-repeat;
+            background-position: right;
+            -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)))
+        }
 
+        .artistinfo2 {
+            /* width: 65%; */
+            margin-right: 6em;
+            /* background: rgb(232, 181, 186); */
+            /* background: linear-gradient(90deg, rgba(232, 181, 186, 1) 0%, rgba(206, 117, 85, 1) 100%); */
+            /* width: 40%; */
+            margin-left: 50px;
+            width: 560px;
+            height: 655px;
+            /* background-color: rgb(255, 209, 214); */
+            margin-top: 30px;
+            /* --angle: 0deg;
+            background: linear-gradient(var(--angle), #8CFBDE, #FF99A5, #7D80DA) 1;
+            animation: 5s rotate linear infinite; */
 
-        /* html 
-        
-        <div class="image_preview_container"><div class="image_preview"></div></div>
-        artistinfo  , photo
-        
-        css 
-        
-        .image_preview_container {
-            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
+            background: linear-gradient(-45deg, #CD7454, #FFD1D6, #D99B59);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
         }
 
 
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
 
-        background: linear-gradient(#004092, #020202, transparent), url(../img/maxfrimout.jpg) no-repeat center; 
+            50% {
+                background-position: 100% 50%;
+            }
 
-        .image_preview {
-            background-image: url("IMAGE LOCATION");
-        } */
-
-        /* .gradientPhoto {
-            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
-        } */
-
-        .photo2 {
-            height: 170px;
-            /* background-image: linear-gradient(#FF99A5, #7D80DA) url(../img/maxfrimout.jpg); */
-            background-image: url("../img/maxfrimout.jpg"); 
-            background-repeat: no-repeat;
-            background-position: right;
-            -webkit-mask-image:-webkit-gradient(linear, left top, right top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
-            /* background-color: rgb(232, 181, 186); */
-            /* background-color: linear-gradient(270deg, rgba(232, 181, 186, 0.8799894957983193) 0%, rgba(254, 208, 213, 1) 94%); */
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
 
@@ -631,7 +636,7 @@
                 </table>
             </div>
         </div>
-        <div class="artistinfo">
+        <div class="artistinfo2">
             <div class="topsection">
 
                 <div class="right">
