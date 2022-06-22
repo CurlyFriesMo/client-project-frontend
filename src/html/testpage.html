@@ -24,115 +24,82 @@
 
 
     <style>
-        .onzichtbaarLogin {
-            display: none;
+        .blokArtistFull:hover {
+            box-shadow: 1px 0px 5px 2px #7D80DA;
+            transform: scale(1.02);
         }
 
-        .overlayCSS {
-            background-color: rgb(255, 255, 255);
-            opacity: 95%;
-            /* border: solid 1px black; */
-            position: absolute;
+        .pastNiet {
+            margin-top: -10px;
         }
 
-        .overlayTimetable {
-            height: 160px;
-            width: 598px;
-            margin-left: 151px;
-            margin-top: 35px;
-            border: solid 1px #4B4E4A;
+
+        .movingBorder {
+            --angle: 0deg;
+            border: 5px solid;
+            /* border-image: linear-gradient(var(--angle), #12c2e9, #c471ed, #f64f59) 1; */
+            border-image: linear-gradient(var(--angle), #8CFBDE, #FF99A5, #7D80DA) 1;
+            animation: 5s rotate linear infinite;
+            visibility: visible;
         }
 
-        .overlayArtistinfo {
-            height: 80px;
-            width: 435px;
-            padding-bottom: 7px;
-            margin-left: 70px;
-            margin-top: -7px;
-            padding-top: 0px;
-        }
-
-        .contentOverlay {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            color: #4B4E4A;
-        }
-
-        .loginButton {
-            background-image: linear-gradient(to right, #D99B59, #CD7454);
-            color: white;
-            border-radius: 32px;
-            border: none;
-            margin-left: auto;
-            margin-right: auto;
-            display: flex;
-            font-family: 'Staatliches', cursive;
-        }
-
-        .loginText {
-            text-align: center;
-            font-family: 'Montserrat', sans-serif;
-            color: #4B4E4A;
-        }
-
-        .questionmark {
-            border-radius: 50%;
+        .blokArtistpersonalx {
             background-color: white;
-            border: 1px solid #4B4E4A;
-        }
-
-        .loginTextAi {
-            font-size: 12px;
-            margin-bottom: -10px;
-            margin-top: 0px;
-        }
-
-        .questionmarkAi {
-            margin-top: -13px;
-            margin-left: 410px;
+            height: 160px;
             position: absolute;
+            border: 1px solid #4B4E4A;
             font-size: 12px;
-            padding-left: 5px;
-            padding-right: 5px;
         }
 
-        .loginbuttonLogoAi {
-            width: 14px;
-            padding-left: 8px;
-            padding-right: 15px;
-            margin-top: 3px;
+
+
+        /* html 
+        
+        <div class="image_preview_container"><div class="image_preview"></div></div>
+        artistinfo  , photo
+        
+        css 
+        
+        .image_preview_container {
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
         }
 
-        .loginButtonAi {
-            padding-top: 4px;
-            padding-bottom: 4px;
-            font-size: 17px;
-            padding-right: 35px;
+
+
+        background: linear-gradient(#004092, #020202, transparent), url(../img/maxfrimout.jpg) no-repeat center; 
+
+        .image_preview {
+            background-image: url("IMAGE LOCATION");
+        } */
+
+        /* .gradientPhoto {
+            mask-image: linear-gradient(to right, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
+        } */
+
+        .photo2 {
+            height: 170px;
+            /* background-image: linear-gradient(#FF99A5, #7D80DA) url(../img/maxfrimout.jpg); */
+            background-image: url("../img/maxfrimout.jpg"); 
+            background-repeat: no-repeat;
+            background-position: right;
+            -webkit-mask-image:-webkit-gradient(linear, left top, right top, from(rgba(0,0,0,1)), to(rgba(0,0,0,0)))
+            /* background-color: rgb(232, 181, 186); */
+            /* background-color: linear-gradient(270deg, rgba(232, 181, 186, 0.8799894957983193) 0%, rgba(254, 208, 213, 1) 94%); */
         }
 
-        .loginButtonTt {
-            padding-top: 11px;
-            padding-bottom: 8px;
-            font-size: 22px;
-            padding-right: 60px;
+
+
+        @keyframes rotate {
+            to {
+                --angle: 360deg;
+            }
         }
 
-        .loginTextTt {
-            font-size: 18px;
-            margin-bottom: 0px;
+        @property --angle {
+            syntax: '<angle>';
+            initial-value: 0deg;
+            inherits: false;
         }
-
-        .questionmarkTt {
-            float: right;
-            margin-top: -12px;
-            margin-right: 10px;
-        }
-
-        .loginbuttonLogoTt {
-            width: 21px;
-            padding-left: 10px;
-            padding-right: 25px;
-        }
-
     </style>
 
 
@@ -159,118 +126,106 @@
                 <h1 class="font1 day">Friday October 15</h1>
                 <h2 class="font2 grey">personal timetable</h2>
                 <div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist1Personal">
+                    <div class="blokArtistPersonalx movingBorder" id="blokArtist1Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname1">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre1">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist2Personal">
+                    <div class="blokArtistPersonal" id="blokArtist2Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname2">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre2">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist3Personal">
+                    <div class="blokArtistPersonal" id="blokArtist3Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname3">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre3">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist4Personal">
+                    <div class="blokArtistPersonal" id="blokArtist4Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname4">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre4">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist5Personal">
+                    <div class="blokArtistPersonal" id="blokArtist5Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname5">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre5">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist6Personal">
+                    <div class="blokArtistPersonal" id="blokArtist6Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname6">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre6">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist7Personal">
+                    <div class="blokArtistPersonal" id="blokArtist7Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname7">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre7">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist8Personal">
+                    <div class="blokArtistPersonal" id="blokArtist8Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname8">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre8">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist9Personal">
+                    <div class="blokArtistPersonal" id="blokArtist9Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname9">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre9">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist10Personal">
+                    <div class="blokArtistPersonal" id="blokArtist10Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname10">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre10">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist11Personal">
+                    <div class="blokArtistPersonal" id="blokArtist11Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname11">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre11">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist12Personal">
+                    <div class="blokArtistPersonal" id="blokArtist12Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname12">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre12">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist13Personal">
+                    <div class="blokArtistPersonal" id="blokArtist13Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname13">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre13">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist14Personal">
+                    <div class="blokArtistPersonal" id="blokArtist14Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname14">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre14">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist15Personal">
+                    <div class="blokArtistPersonal" id="blokArtist15Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname15">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre15">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist16Personal">
+                    <div class="blokArtistPersonal" id="blokArtist16Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname16">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre16">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist17Personal">
+                    <div class="blokArtistPersonal" id="blokArtist17Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname17">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre17">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist18Personal">
+                    <div class="blokArtistPersonal" id="blokArtist18Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname18">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre18">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist19Personal">
+                    <div class="blokArtistPersonal" id="blokArtist19Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname19">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre19">Genre</p>
                     </div>
-                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist20Personal">
+                    <div class="blokArtistPersonal" id="blokArtist20Personal">
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname20">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre20">Genre</p>
                     </div>
-
-                    <div class="overlayCSS overlayTimetable">
-                        <!-- Overlay als de gebruiker nog niet heeft ingelogd -->
-                        <div class="contentOverlay">
-                            <br><button onclick="loginRedirect()" class="questionmark questionmarkTt">?</button>
-                            <p class="loginText loginTextTt">Log in with Spotify to use this function!</p>
-                            <br><button class="loginButton loginButtonTt" onclick="loginRedirect()"><img src="spotifyLogo.png"
-                                    class="loginbuttonLogo loginbuttonLogoTt">
-                                LOG IN WITH SPOTIFY</button>
-                        </div>
-                    </div>
-
                     <!-- De persoonlijke timetable -->
                     <table border="0" cellspacing="0">
 
@@ -361,12 +316,12 @@
             <div class="fullTt">
                 <h2 class="font2 grey">full timetable</h2>
 
-                <div class="blokArtistFull" id="blokArtist1Full">
+                <div class="blokArtistFull movingBorder" id="blokArtist1Full">
                     <p class="artistname1">Artist name</p>
                 </div>
 
-                <div class="blokArtistFull" id="blokArtist2Full">
-                    <p class="artistname2">Artist name</p>
+                <div class="blokArtistFull pastNiet" id="blokArtist2Full">
+                    <p class="artistname2 pastNiet">Artist name</p>
                 </div>
                 <div class="blokArtistFull" id="blokArtist3Full">
                     <p class="artistname3">Artist name</p>
@@ -689,36 +644,24 @@
                 </div>
             </div>
 
-            <div class="photo">
-                <h1 class="artistname">Max Frimout</h1>
-                <h2 class="artistgenre">NEUROFUNK</h2>
+            <div class="gradientPhoto">
+                <div class="photo2">
+                    <h1 class="artistname">Max Frimout</h1>
+                    <h2 class="artistgenre">NEUROFUNK</h2>
+                </div>
             </div>
 
             <div class="otherartists">
 
                 <p class="artistdesc">This artist sounds similar to some artists you love!</p>
-
-                <div class="overlayCSS overlayArtistinfo">
-                    <!-- Overlay als de gebruiker nog niet heeft ingelogd -->
-                    <div class="contentOverlay">
-                        <br><button onclick="loginRedirect()" class="questionmark questionmarkAi">?</button>
-                        <p class="loginText loginTextAi">Log in with Spotify to use this function!</p>
-                        <br><button class="loginButton loginButtonAi" onclick="loginRedirect()"><img src="spotifyLogo.png"
-                                class="loginbuttonLogo loginbuttonLogoAi">
-                            LOG IN</button>
-                    </div>
-                </div>
-
-                <div class="otherartistpic onzichtbaarLogin">
+                <div class="otherartistpic">
                     <img class="otherartistpics" src="../img/artp1-modified.png">
                     <p class="oap">Angela olsen</p>
                 </div>
-                <div class="otherartistpic onzichtbaarLogin"><img class="otherartistpics"
-                        src="../img/artp1-modified.png">
+                <div class="otherartistpic"><img class="otherartistpics" src="../img/artp1-modified.png">
                     <p class="oap">Angela olsen</p>
                 </div>
-                <div class="otherartistpic onzichtbaarLogin"><img class="otherartistpics"
-                        src="../img/artp1-modified.png">
+                <div class="otherartistpic"><img class="otherartistpics" src="../img/artp1-modified.png">
                     <p class="oap">Angela olsen</p>
 
                 </div>
@@ -734,10 +677,6 @@
     </div>
 </body>
 <script>
-    // 20 artists op vrijdag
-
-
-    // handmatig invoeren per artiest
     // artiest 1 (starttijd, eindtijd, datum, artiestennaam, genre, venue)
     var start1 = "20:00";
     var end1 = "21:00";
@@ -818,315 +757,6 @@
     } else if (Difference_In_Days == 0) {
         //its sunday
         blokArtist1Personal.style.marginTop = "350px";
-    } else {
-        console.log("error days");
-    }
-
-
-
-
-
-
-
-    // Artist 2
-    var start2 = "18:00";
-    var end2 = "18:30";
-    var day2 = new Date("10/15/2021");
-    var artistname2 = document.getElementsByClassName('artistname2');
-    for (var i = 0; i < artistname2.length; i++) {
-        artistname2[i].innerHTML = "Max Frimout";
-    }
-    document.getElementById("genre2").innerHTML = "Dance";
-    var venueArtist2 = 2;
-    // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
-
-    var blokArtist2Personal = document.getElementById("blokArtist2Personal");
-    var blokArtist2Full = document.getElementById("blokArtist2Full");
-
-    if (venueArtist2 == 1) {
-        blokArtist2Full.style.marginTop = "24px";
-    } else if (venueArtist2 == 2) {
-        blokArtist2Full.style.marginTop = "61px";
-    } else if (venueArtist2 == 3) {
-        blokArtist2Full.style.marginTop = "98px";
-    } else if (venueArtist2 == 4) {
-        blokArtist2Full.style.marginTop = "135px";
-    } else if (venueArtist2 == 5) {
-        blokArtist2Full.style.marginTop = "172px";
-    } else if (venueArtist2 == 6) {
-        blokArtist2Full.style.marginTop = "209px";
-    } else {
-        console.write("error venue");
-    }
-
-    start2 = start2.split(":");
-    end2 = end2.split(":");
-
-    function diff(start2, end2) {
-
-        var start2Date = new Date(0, 0, 0, start2[0], start2[1], 0);
-        var end2Date = new Date(0, 0, 0, end2[0], end2[1], 0);
-        var diff = end2Date.getTime() - start2Date.getTime();
-        var hours = Math.floor(diff / 1000 / 60 / 60);
-        diff -= hours * 1000 * 60 * 60;
-        var minutes = Math.floor(diff / 1000 / 60);
-        var totalMinutes2 = (hours * 60) + minutes;
-
-        if (hours < 0)
-            hours = hours + 24;
-
-        return totalMinutes2
-    }
-
-    var widthArtist2 = diff(start2, end2) / 6 * 10;
-    blokArtist2Personal.style.width = widthArtist2 + "px";
-    blokArtist2Full.style.width = (widthArtist2 - 7) + "px";
-
-    var marginLeftArtist2 = ((((start2[0] - 18) * 60)) / 6 * 10) + (start2[1] / 6 * 10) + 150;
-    blokArtist2Personal.style.marginLeft = marginLeftArtist2 + "px";
-    blokArtist2Full.style.marginLeft = (marginLeftArtist2 + 1) + "px";
-
-    var Difference_In_Time2 = day2.getTime() - day0.getTime();
-    var Difference_In_Days2 = Difference_In_Time2 / (1000 * 3600 * 24);
-
-    if (Difference_In_Days2 == -2) {
-        //its friday
-        blokArtist2Personal.style.marginTop = "40px";
-    } else if (Difference_In_Days2 == -1) {
-        //its saturday
-        blokArtist2Personal.style.marginTop = "250px";
-    } else if (Difference_In_Days2 == 0) {
-        //its sunday
-        blokArtist2Personal.style.marginTop = "350px";
-    } else {
-        console.log("error days");
-    }
-
-
-
-    var start3 = "19:00";
-    var end3 = "20:00";
-    var day3 = new Date("10/15/2021");
-    var artistname3 = document.getElementsByClassName('artistname3');
-    for (var i = 0; i < artistname3.length; i++) {
-        artistname3[i].innerHTML = "Bastards Ball";
-    }
-    document.getElementById("genre3").innerHTML = "Idk";
-    var venueArtist3 = 1;
-    // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
-
-    var blokArtist3Personal = document.getElementById("blokArtist3Personal");
-    var blokArtist3Full = document.getElementById("blokArtist3Full");
-
-    if (venueArtist3 == 1) {
-        blokArtist3Full.style.marginTop = "24px";
-    } else if (venueArtist3 == 2) {
-        blokArtist3Full.style.marginTop = "61px";
-    } else if (venueArtist3 == 3) {
-        blokArtist3Full.style.marginTop = "98px";
-    } else if (venueArtist3 == 4) {
-        blokArtist3Full.style.marginTop = "135px";
-    } else if (venueArtist3 == 5) {
-        blokArtist3Full.style.marginTop = "172px";
-    } else if (venueArtist3 == 6) {
-        blokArtist3Full.style.marginTop = "209px";
-    } else {
-        console.write("error venue");
-    }
-
-    start3 = start3.split(":");
-    end3 = end3.split(":");
-
-    function diff(start3, end3) {
-
-        var start3Date = new Date(0, 0, 0, start3[0], start3[1], 0);
-        var end3Date = new Date(0, 0, 0, end3[0], end3[1], 0);
-        var diff = end3Date.getTime() - start3Date.getTime();
-        var hours = Math.floor(diff / 1000 / 60 / 60);
-        diff -= hours * 1000 * 60 * 60;
-        var minutes = Math.floor(diff / 1000 / 60);
-        var totalMinutes3 = (hours * 60) + minutes;
-
-        if (hours < 0)
-            hours = hours + 24;
-
-        return totalMinutes3
-    }
-
-    var widthArtist3 = diff(start3, end3) / 6 * 10;
-    blokArtist3Personal.style.width = widthArtist3 + "px";
-    blokArtist3Full.style.width = (widthArtist3 - 7) + "px";
-
-    var marginLeftArtist3 = ((((start3[0] - 18) * 60)) / 6 * 10) + (start3[1] / 6 * 10) + 150;
-    blokArtist3Personal.style.marginLeft = marginLeftArtist3 + "px";
-    blokArtist3Full.style.marginLeft = (marginLeftArtist3 + 1) + "px";
-
-    var Difference_In_Time3 = day3.getTime() - day0.getTime();
-    var Difference_In_Days3 = Difference_In_Time3 / (1000 * 3600 * 24);
-
-    if (Difference_In_Days3 == -2) {
-        //its friday
-        blokArtist3Personal.style.marginTop = "40px";
-    } else if (Difference_In_Days3 == -1) {
-        //its saturday
-        blokArtist3Personal.style.marginTop = "250px";
-    } else if (Difference_In_Days3 == 0) {
-        //its sunday
-        blokArtist3Personal.style.marginTop = "350px";
-    } else {
-        console.log("error days");
-    }
-
-
-
-    //Artist4
-
-    var start4 = "20:00";
-    var end4 = "21:00";
-    var day4 = new Date("10/15/2021");
-    var artistname4 = document.getElementsByClassName('artistname4');
-    for (var i = 0; i < artistname4.length; i++) {
-        artistname4[i].innerHTML = "ALORA";
-    }
-    document.getElementById("genre4").innerHTML = "Dance";
-    var venueArtist4 = 1;
-    // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
-
-    var blokArtist4Personal = document.getElementById("blokArtist4Personal");
-    var blokArtist4Full = document.getElementById("blokArtist4Full");
-
-    if (venueArtist4 == 1) {
-        blokArtist4Full.style.marginTop = "24px";
-    } else if (venueArtist4 == 2) {
-        blokArtist4Full.style.marginTop = "61px";
-    } else if (venueArtist4 == 3) {
-        blokArtist4Full.style.marginTop = "98px";
-    } else if (venueArtist4 == 4) {
-        blokArtist4Full.style.marginTop = "135px";
-    } else if (venueArtist4 == 5) {
-        blokArtist4Full.style.marginTop = "172px";
-    } else if (venueArtist4 == 6) {
-        blokArtist4Full.style.marginTop = "209px";
-    } else {
-        console.write("error venue");
-    }
-
-    start4 = start4.split(":");
-    end4 = end4.split(":");
-
-    function diff(start4, end4) {
-
-        var start4Date = new Date(0, 0, 0, start4[0], start4[1], 0);
-        var end4Date = new Date(0, 0, 0, end4[0], end4[1], 0);
-        var diff = end4Date.getTime() - start4Date.getTime();
-        var hours = Math.floor(diff / 1000 / 60 / 60);
-        diff -= hours * 1000 * 60 * 60;
-        var minutes = Math.floor(diff / 1000 / 60);
-        var totalMinutes4 = (hours * 60) + minutes;
-
-        if (hours < 0)
-            hours = hours + 24;
-
-        return totalMinutes4
-    }
-
-    var widthArtist4 = diff(start4, end4) / 6 * 10;
-    blokArtist4Personal.style.width = widthArtist4 + "px";
-    blokArtist4Full.style.width = (widthArtist4 - 7) + "px";
-
-    var marginLeftArtist4 = ((((start4[0] - 18) * 60)) / 6 * 10) + (start4[1] / 6 * 10) + 150;
-    blokArtist4Personal.style.marginLeft = marginLeftArtist4 + "px";
-    blokArtist4Full.style.marginLeft = (marginLeftArtist4 + 1) + "px";
-
-    var Difference_In_Time4 = day4.getTime() - day0.getTime();
-    var Difference_In_Days4 = Difference_In_Time4 / (1000 * 3600 * 24);
-
-    if (Difference_In_Days4 == -2) {
-        //its friday
-        blokArtist4Personal.style.marginTop = "40px";
-    } else if (Difference_In_Days4 == -1) {
-        //its saturday
-        blokArtist4Personal.style.marginTop = "250px";
-    } else if (Difference_In_Days4 == 0) {
-        //its sunday
-        blokArtist4Personal.style.marginTop = "350px";
-    } else {
-        console.log("error days");
-    }
-
-
-
-    //Artist5
-
-    var start5 = "21:00";
-    var end5 = "22:00";
-    var day5 = new Date("10/15/2021");
-    var artistname5 = document.getElementsByClassName('artistname5');
-    for (var i = 0; i < artistname5.length; i++) {
-        artistname5[i].innerHTML = "NCT";
-    }
-    document.getElementById("genre5").innerHTML = "Dance";
-    var venueArtist5 = 1;
-    // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
-
-    var blokArtist5Personal = document.getElementById("blokArtist5Personal");
-    var blokArtist5Full = document.getElementById("blokArtist5Full");
-
-    if (venueArtist5 == 1) {
-        blokArtist5Full.style.marginTop = "24px";
-    } else if (venueArtist5 == 2) {
-        blokArtist5Full.style.marginTop = "61px";
-    } else if (venueArtist5 == 3) {
-        blokArtist5Full.style.marginTop = "98px";
-    } else if (venueArtist5 == 4) {
-        blokArtist5Full.style.marginTop = "135px";
-    } else if (venueArtist5 == 5) {
-        blokArtist5Full.style.marginTop = "172px";
-    } else if (venueArtist5 == 6) {
-        blokArtist5Full.style.marginTop = "209px";
-    } else {
-        console.write("error venue");
-    }
-
-    start5 = start5.split(":");
-    end5 = end5.split(":");
-
-    function diff(start5, end5) {
-
-        var start5Date = new Date(0, 0, 0, start5[0], start5[1], 0);
-        var end5Date = new Date(0, 0, 0, end5[0], end5[1], 0);
-        var diff = end5Date.getTime() - start5Date.getTime();
-        var hours = Math.floor(diff / 1000 / 60 / 60);
-        diff -= hours * 1000 * 60 * 60;
-        var minutes = Math.floor(diff / 1000 / 60);
-        var totalMinutes5 = (hours * 60) + minutes;
-
-        if (hours < 0)
-            hours = hours + 24;
-
-        return totalMinutes5
-    }
-
-    var widthArtist5 = diff(start5, end5) / 6 * 10;
-    blokArtist5Personal.style.width = widthArtist5 + "px";
-    blokArtist5Full.style.width = (widthArtist5 - 7) + "px";
-
-    var marginLeftArtist5 = ((((start5[0] - 18) * 60)) / 6 * 10) + (start5[1] / 6 * 10) + 150;
-    blokArtist5Personal.style.marginLeft = marginLeftArtist5 + "px";
-    blokArtist5Full.style.marginLeft = (marginLeftArtist5 + 1) + "px";
-
-    var Difference_In_Time5 = day5.getTime() - day0.getTime();
-    var Difference_In_Days5 = Difference_In_Time5 / (1000 * 3600 * 24);
-
-    if (Difference_In_Days5 == -2) {
-        //its friday
-        blokArtist5Personal.style.marginTop = "40px";
-    } else if (Difference_In_Days5 == -1) {
-        //its saturday
-        blokArtist5Personal.style.marginTop = "250px";
-    } else if (Difference_In_Days5 == 0) {
-        //its sunday
-        blokArtist5Personal.style.marginTop = "350px";
     } else {
         console.log("error days");
     }
