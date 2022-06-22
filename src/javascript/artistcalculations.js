@@ -82,7 +82,7 @@ var start3 = "19:00";
      for (var i = 0; i < artistname4.length; i++) {
          artistname4[i].innerHTML = "ALORA";
      }
-     document.getElementById("genre4").innerHTML = "Dance";
+     document.getElementById("genre4").innerHTML = "Idk";
      var venueArtist4 = 1;
      // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
  
@@ -159,7 +159,7 @@ var start3 = "19:00";
   for (var i = 0; i < artistname5.length; i++) {
       artistname5[i].innerHTML = "NCT";
   }
-  document.getElementById("genre5").innerHTML = "Dance";
+  document.getElementById("genre5").innerHTML = "Idk";
   var venueArtist5 = 1;
   // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
 
@@ -228,15 +228,15 @@ var start3 = "19:00";
 
     //Artist6
 
-    var start6 = "18:00";
-    var end6 = "18:30";
+    var start6 = "22:00";
+    var end6 = "23:00";
     var day6 = new Date("10/15/2021");
     var artistname6 = document.getElementsByClassName('artistname6');
     for (var i = 0; i < artistname6.length; i++) {
-        artistname6[i].innerHTML = "Max Frimout";
+        artistname6[i].innerHTML = "Protostar";
     }
-    document.getElementById("genre6").innerHTML = "Dance";
-    var venueArtist6 = 2;
+    document.getElementById("genre6").innerHTML = "Idk";
+    var venueArtist6 = 1;
     // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
 
     var blokArtist6Personal = document.getElementById("blokArtist6Personal");
@@ -302,14 +302,14 @@ var start3 = "19:00";
 
     //Artist7
 
-    var start7 = "18:00";
-    var end7 = "18:30";
+    var start7 = "18:30";
+    var end7 = "19:30";
     var day7 = new Date("10/15/2021");
     var artistname7 = document.getElementsByClassName('artistname7');
     for (var i = 0; i < artistname7.length; i++) {
-        artistname7[i].innerHTML = "Max Frimout";
+        artistname7[i].innerHTML = "ITem";
     }
-    document.getElementById("genre7").innerHTML = "Dance";
+    document.getElementById("genre7").innerHTML = "Idk";
     var venueArtist7 = 2;
     // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
 
@@ -377,14 +377,14 @@ var start3 = "19:00";
 
     //Artist8
 
-    var start8 = "18:00";
-    var end8 = "18:30";
+    var start8 = "19:30";
+    var end8 = "21:00";
     var day8 = new Date("10/15/2021");
     var artistname8 = document.getElementsByClassName('artistname8');
     for (var i = 0; i < artistname8.length; i++) {
-        artistname8[i].innerHTML = "Max Frimout";
+        artistname8[i].innerHTML = "Iris Rijskamp";
     }
-    document.getElementById("genre8").innerHTML = "Dance";
+    document.getElementById("genre8").innerHTML = "Idk";
     var venueArtist8 = 2;
     // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
 
@@ -450,14 +450,14 @@ var start3 = "19:00";
 
     //Artist9
 
-    var start9 = "18:00";
-    var end9 = "18:30";
+    var start9 = "21:00";
+    var end9 = "22:30";
     var day9 = new Date("10/15/2021");
     var artistname9 = document.getElementsByClassName('artistname9');
     for (var i = 0; i < artistname9.length; i++) {
-        artistname9[i].innerHTML = "Max Frimout";
+        artistname9[i].innerHTML = "Afra";
     }
-    document.getElementById("genre9").innerHTML = "Dance";
+    document.getElementById("genre9").innerHTML = "Idk";
     var venueArtist9 = 2;
     // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
 
@@ -524,14 +524,14 @@ var start3 = "19:00";
 
     //Artist10
 
-    var start10 = "18:00";
-    var end10 = "18:30";
+    var start10 = "22:30";
+    var end10 = "00:00";
     var day10 = new Date("10/15/2021");
     var artistname10 = document.getElementsByClassName('artistname10');
     for (var i = 0; i < artistname10.length; i++) {
-        artistname10[i].innerHTML = "Max Frimout";
+        artistname10[i].innerHTML = "Jess Oberlin & Laura van Hal";
     }
-    document.getElementById("genre10").innerHTML = "Dance";
+    document.getElementById("genre10").innerHTML = "Idk";
     var venueArtist10 = 2;
     // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
 
@@ -598,15 +598,15 @@ var start3 = "19:00";
 
     //Artist11
 
-    var start11 = "18:00";
-    var end11 = "18:30";
+    var start11 = "20:00";
+    var end11 = "20:30";
     var day11 = new Date("10/15/2021");
     var artistname11 = document.getElementsByClassName('artistname11');
     for (var i = 0; i < artistname11.length; i++) {
-        artistname11[i].innerHTML = "Max Frimout";
+        artistname11[i].innerHTML = "Baby's Berserk";
     }
-    document.getElementById("genre11").innerHTML = "Dance";
-    var venueArtist11 = 2;
+    document.getElementById("genre11").innerHTML = "Idk";
+    var venueArtist11 = 3;
     // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
 
     var blokArtist11Personal = document.getElementById("blokArtist11Personal");
@@ -672,15 +672,15 @@ var start3 = "19:00";
 
     //Artist12
 
-    var start12 = "18:00";
-    var end12 = "18:30";
+    var start12 = "21:00";
+    var end12 = "22:00";
     var day12 = new Date("10/15/2021");
     var artistname12 = document.getElementsByClassName('artistname12');
     for (var i = 0; i < artistname12.length; i++) {
-        artistname12[i].innerHTML = "Max Frimout";
+        artistname12[i].innerHTML = "Sophie Straat";
     }
-    document.getElementById("genre12").innerHTML = "Dance";
-    var venueArtist12 = 2;
+    document.getElementById("genre12").innerHTML = "Idk";
+    var venueArtist12 = 3;
     // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
 
     var blokArtist12Personal = document.getElementById("blokArtist12Personal");
@@ -746,15 +746,15 @@ var start3 = "19:00";
 
     //Artist13
 
-    var start13 = "18:00";
-    var end13 = "18:30";
+    var start13 = "22:30";
+    var end13 = "23:30";
     var day13 = new Date("10/15/2021");
     var artistname13 = document.getElementsByClassName('artistname13');
     for (var i = 0; i < artistname13.length; i++) {
-        artistname13[i].innerHTML = "Max Frimout";
+        artistname13[i].innerHTML = "Charlie & The Lesbians";
     }
-    document.getElementById("genre13").innerHTML = "Dance";
-    var venueArtist13 = 2;
+    document.getElementById("genre13").innerHTML = "Idk";
+    var venueArtist13 = 3;
     // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
 
     var blokArtist13Personal = document.getElementById("blokArtist13Personal");
@@ -819,15 +819,15 @@ var start3 = "19:00";
 
     //Artist14
 
-    var start14 = "18:00";
-    var end14 = "18:30";
+    var start14 = "21:00";
+    var end14 = "21:45";
     var day14 = new Date("10/15/2021");
     var artistname14 = document.getElementsByClassName('artistname14');
     for (var i = 0; i < artistname14.length; i++) {
-        artistname14[i].innerHTML = "Max Frimout";
+        artistname14[i].innerHTML = "Remme";
     }
-    document.getElementById("genre14").innerHTML = "Dance";
-    var venueArtist14 = 2;
+    document.getElementById("genre14").innerHTML = "Idk";
+    var venueArtist14 = 4;
     // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
 
     var blokArtist14Personal = document.getElementById("blokArtist14Personal");
@@ -891,15 +891,15 @@ var start3 = "19:00";
 
     //Artist15
 
-    var start15 = "18:00";
+    var start15 = "22:30";
     var end15 = "18:30";
     var day15 = new Date("10/15/2021");
     var artistname15 = document.getElementsByClassName('artistname15');
     for (var i = 0; i < artistname15.length; i++) {
-        artistname15[i].innerHTML = "Max Frimout";
+        artistname15[i].innerHTML = "Nambyar";
     }
-    document.getElementById("genre15").innerHTML = "Dance";
-    var venueArtist15 = 2;
+    document.getElementById("genre15").innerHTML = "Indiepop";
+    var venueArtist15 = 4;
     // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
 
     var blokArtist15Personal = document.getElementById("blokArtist15Personal");
@@ -965,15 +965,15 @@ var start3 = "19:00";
 
    //Artist16
 
-   var start16 = "18:00";
-   var end16 = "18:30";
+   var start16 = "21:30";
+   var end16 = "22:45";
    var day16 = new Date("10/15/2021");
    var artistname16 = document.getElementsByClassName('artistname16');
    for (var i = 0; i < artistname16.length; i++) {
-       artistname16[i].innerHTML = "Max Frimout";
+       artistname16[i].innerHTML = "TBA";
    }
-   document.getElementById("genre16").innerHTML = "Dance";
-   var venueArtist16 = 2;
+   document.getElementById("genre16").innerHTML = "Idk";
+   var venueArtist16 = 5;
    // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
 
    var blokArtist16Personal = document.getElementById("blokArtist16Personal");
@@ -1043,15 +1043,15 @@ var start3 = "19:00";
 
     //Artist17
 
-    var start17 = "18:00";
-    var end17 = "18:30";
+    var start17 = "19:30";
+    var end17 = "20:00";
     var day17 = new Date("10/15/2021");
     var artistname17 = document.getElementsByClassName('artistname17');
     for (var i = 0; i < artistname17.length; i++) {
-        artistname17[i].innerHTML = "Max Frimout";
+        artistname17[i].innerHTML = "De Witte Kunst";
     }
-    document.getElementById("genre17").innerHTML = "Dance";
-    var venueArtist17 = 2;
+    document.getElementById("genre17").innerHTML = "Idk";
+    var venueArtist17 = 6;
     // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
 
     var blokArtist17Personal = document.getElementById("blokArtist17Personal");
@@ -1116,15 +1116,15 @@ var start3 = "19:00";
 
     //Artist18
 
-    var start18 = "18:00";
-    var end18 = "18:30";
+    var start18 = "20:45";
+    var end18 = "21:15";
     var day18 = new Date("10/15/2021");
     var artistname18 = document.getElementsByClassName('artistname18');
     for (var i = 0; i < artistname18.length; i++) {
-        artistname18[i].innerHTML = "Max Frimout";
+        artistname18[i].innerHTML = "Kwartet Niek Hilk...";
     }
-    document.getElementById("genre18").innerHTML = "Dance";
-    var venueArtist18 = 2;
+    document.getElementById("genre18").innerHTML = "Idk";
+    var venueArtist18 = 6;
     // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
 
     var blokArtist18Personal = document.getElementById("blokArtist18Personal");
@@ -1188,15 +1188,15 @@ var start3 = "19:00";
 
        //Artist19
 
-       var start19 = "18:00";
-       var end19 = "18:30";
+       var start19 = "22:15";
+       var end19 = "23:00";
        var day19 = new Date("10/15/2021");
        var artistname19 = document.getElementsByClassName('artistname19');
        for (var i = 0; i < artistname19.length; i++) {
-           artistname19[i].innerHTML = "Max Frimout";
+           artistname19[i].innerHTML = "Le Motat";
        }
-       document.getElementById("genre19").innerHTML = "Dance";
-       var venueArtist19 = 2;
+       document.getElementById("genre19").innerHTML = "Idk";
+       var venueArtist19 = 6;
        // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
    
        var blokArtist19Personal = document.getElementById("blokArtist19Personal");
@@ -1269,7 +1269,7 @@ var start3 = "19:00";
        for (var i = 0; i < artistname20.length; i++) {
            artistname20[i].innerHTML = "Max Frimout";
        }
-       document.getElementById("genre20").innerHTML = "Dance";
+       document.getElementById("genre20").innerHTML = "Idk";
        var venueArtist20 = 2;
        // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
    
