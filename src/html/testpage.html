@@ -1,11 +1,1135 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>TestPage</title>
-    <script src="../javascript/getInfo.js"></script>
-</head>
-<body>
+    <title>spotify login test</title>
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand&family=Sorts+Mill+Goudy&display=swap"
+        rel="stylesheet">
+
+    <link href="../css/styles.css" rel="stylesheet">
+    <script src="../javascript/getInfo.js"></script>
+    <script src="../javascript/artistcalculations.js"></script>
+    <script src="../javascript/main.js"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script src="https://kit.fontawesome.com/d67efc6d94.js" crossorigin="anonymous"></script>
+    <link href='https://css.gg/pin.css' rel='stylesheet'>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+    <style>
+        .onzichtbaarLogin {
+            display: none;
+        }
+
+        .overlayCSS {
+            background-color: rgb(255, 255, 255);
+            opacity: 95%;
+            /* border: solid 1px black; */
+            position: absolute;
+        }
+
+        .overlayTimetable {
+            height: 160px;
+            width: 598px;
+            margin-left: 151px;
+            margin-top: 35px;
+            border: solid 1px #4B4E4A;
+        }
+
+        .overlayArtistinfo {
+            height: 80px;
+            width: 435px;
+            padding-bottom: 7px;
+            margin-left: 70px;
+            margin-top: -7px;
+            padding-top: 0px;
+        }
+
+        .contentOverlay {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            color: #4B4E4A;
+        }
+
+        .loginButton {
+            background-image: linear-gradient(to right, #D99B59, #CD7454);
+            color: white;
+            border-radius: 32px;
+            border: none;
+            margin-left: auto;
+            margin-right: auto;
+            display: flex;
+            font-family: 'Staatliches', cursive;
+        }
+
+        .loginText {
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            color: #4B4E4A;
+        }
+
+        .questionmark {
+            border-radius: 50%;
+            background-color: white;
+            border: 1px solid #4B4E4A;
+        }
+
+        .loginTextAi {
+            font-size: 12px;
+            margin-bottom: -10px;
+            margin-top: 0px;
+        }
+
+        .questionmarkAi {
+            margin-top: -13px;
+            margin-left: 410px;
+            position: absolute;
+            font-size: 12px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        .loginbuttonLogoAi {
+            width: 14px;
+            padding-left: 8px;
+            padding-right: 15px;
+            margin-top: 3px;
+        }
+
+        .loginButtonAi {
+            padding-top: 4px;
+            padding-bottom: 4px;
+            font-size: 17px;
+            padding-right: 35px;
+        }
+
+        .loginButtonTt {
+            padding-top: 11px;
+            padding-bottom: 8px;
+            font-size: 22px;
+            padding-right: 60px;
+        }
+
+        .loginTextTt {
+            font-size: 18px;
+            margin-bottom: 0px;
+        }
+
+        .questionmarkTt {
+            float: right;
+            margin-top: -12px;
+            margin-right: 10px;
+        }
+
+        .loginbuttonLogoTt {
+            width: 21px;
+            padding-left: 10px;
+            padding-right: 25px;
+        }
+
+    </style>
+
+
+</head>
+
+<body>
+    <!-- De header -->
+    <div class="headerfully">
+        <img src="hitthecityLofo.jpg" class="headerLogo">
+        <div class="header">
+            <h3 class="headerTitle font1">Timetables</h3>
+            <div class="headerNav">
+                <span class="headerNavContent navSatSun">2021 &#x25BC; </span>
+                <span class="headerNavContent navFriday">FRIDAY OCT 15 </span>
+                <span class="headerNavContent navSatSun">SATURDAY OCT 16</span>
+                <span class="headerNavContent navSatSun">SUNDAY OCT 17</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="content">
+        <div id="timetables">
+            <div id="personalTimetable">
+                <h1 class="font1 day">Friday October 15</h1>
+                <h2 class="font2 grey">personal timetable</h2>
+                <div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist1Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname1">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre1">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist2Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname2">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre2">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist3Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname3">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre3">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist4Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname4">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre4">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist5Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname5">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre5">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist6Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname6">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre6">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist7Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname7">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre7">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist8Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname8">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre8">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist9Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname9">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre9">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist10Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname10">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre10">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist11Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname11">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre11">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist12Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname12">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre12">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist13Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname13">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre13">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist14Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname14">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre14">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist15Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname15">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre15">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist16Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname16">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre16">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist17Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname17">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre17">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist18Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname18">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre18">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist19Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname19">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre19">Genre</p>
+                    </div>
+                    <div class="blokArtistPersonal onzichtbaarLogin" id="blokArtist20Personal">
+                        <img src="placeholder-image.jpeg" class="placeholder1">
+                        <p class="bloktekst artistname20">Artist name</p>
+                        <p class="bloktekst bloktekstGenre" id="genre20">Genre</p>
+                    </div>
+
+                    <div class="overlayCSS overlayTimetable">
+                        <!-- Overlay als de gebruiker nog niet heeft ingelogd -->
+                        <div class="contentOverlay">
+                            <br><button onclick="loginRedirect()" class="questionmark questionmarkTt">?</button>
+                            <p class="loginText loginTextTt">Log in with Spotify to use this function!</p>
+                            <br><button class="loginButton loginButtonTt" onclick="loginRedirect()"><img src="spotifyLogo.png"
+                                    class="loginbuttonLogo loginbuttonLogoTt">
+                                LOG IN WITH SPOTIFY</button>
+                        </div>
+                    </div>
+
+                    <!-- De persoonlijke timetable -->
+                    <table border="0" cellspacing="0">
+
+                        <tr>
+                            <!-- Dit is niet zichtbaar.
+                                Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
+                            <td height="1px" width="150px"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                        </tr>
+
+                        <tr>
+                            <!-- Hier worden de uren aangegeven boven de timetables -->
+                            <td class="tijdenTt zesuur" colspan="2">
+                                <b>18:00</b>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>19:00</b>
+                            </td>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>20.00</b>
+                            </td>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>21:00</b>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>22:00</b>
+                            </td>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>23:00</b>
+                            </td>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>00:00</b>
+                            </td>
+                        </tr>
+
+                        <tr class="bgOranjeHtc">
+                            <!-- Dit is de achtergrond van de persoonlijke timetable.
+                                Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="fullTt">
+                <h2 class="font2 grey">full timetable</h2>
+
+                <div class="blokArtistFull" id="blokArtist1Full">
+                    <p class="artistname1">Artist name</p>
+                </div>
+
+                <div class="blokArtistFull" id="blokArtist2Full">
+                    <p class="artistname2">Artist name</p>
+                </div>
+                <div class="blokArtistFull" id="blokArtist3Full">
+                    <p class="artistname3">Artist name</p>
+                </div>
+
+                <div class="blokArtistFull" id="blokArtist4Full">
+                    <p class="artistname4">Artist name</p>
+                </div>
+                <div class="blokArtistFull" id="blokArtist5Full">
+                    <p class="artistname5">Artist name</p>
+                </div>
+
+                <div class="blokArtistFull" id="blokArtist6Full">
+                    <p class="artistname6">Artist name</p>
+                </div>
+                <div class="blokArtistFull" id="blokArtist7Full">
+                    <p class="artistname7">Artist name</p>
+                </div>
+
+                <div class="blokArtistFull" id="blokArtist8Full">
+                    <p class="artistname8">Artist name</p>
+                </div>
+                <div class="blokArtistFull" id="blokArtist9Full">
+                    <p class="artistname9">Artist name</p>
+                </div>
+
+                <div class="blokArtistFull" id="blokArtist10Full">
+                    <p class="artistname10">Artist name</p>
+                </div>
+                <div class="blokArtistFull" id="blokArtist11Full">
+                    <p class="artistname11">Artist name</p>
+                </div>
+
+                <div class="blokArtistFull" id="blokArtist12Full">
+                    <p class="artistname12">Artist name</p>
+                </div>
+                <div class="blokArtistFull" id="blokArtist13Full">
+                    <p class="artistname13">Artist name</p>
+                </div>
+
+                <div class="blokArtistFull" id="blokArtist14Full">
+                    <p class="artistname14">Artist name</p>
+                </div>
+                <div class="blokArtistFull" id="blokArtist15Full">
+                    <p class="artistname15">Artist name</p>
+                </div>
+
+                <div class="blokArtistFull" id="blokArtist16Full">
+                    <p class="artistname16">Artist name</p>
+                </div>
+                <div class="blokArtistFull" id="blokArtist17Full">
+                    <p class="artistname17">Artist name</p>
+                </div>
+
+                <div class="blokArtistFull" id="blokArtist18Full">
+                    <p class="artistname18">Artist name</p>
+                </div>
+                <div class="blokArtistFull" id="blokArtist19Full">
+                    <p class="artistname19">Artist name</p>
+                </div>
+
+                <div class="blokArtistFull" id="blokArtist20Full">
+                    <p class="artistname20">Artist name</p>
+                </div>
+
+                <table border="0" cellspacing="0">
+
+                    <tr>
+                        <!-- Dit is niet zichtbaar. Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
+                        <td height="1" width="150"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                    </tr>
+
+                    <tr>
+                        <!-- Hier worden de uren aangegeven boven de timetables -->
+                        <td class="tijdenTt zesuur" colspan="2">
+                            <b>18:00</b>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>19:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>20.00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>21:00</b>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>22:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>23:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>00:00</b>
+                        </td>
+                    </tr>
+
+                    <tr class="bgRozeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Effenaar</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgOranjeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Subbar</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgRozeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Stroomhuis</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgOranjeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Fifth</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgRozeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Dynamo</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgOranjeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Altstadt</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="artistinfo">
+            <div class="topsection">
+
+                <div class="right">
+                    <p class="details">HIGHEST MATCH</p>
+                </div>
+
+                <div class="left">
+                    <p class="match"><i class="fa-solid fa-clock"></i> 23:00-00:00 <i
+                            class="fa-solid fa-location-pin"></i> Effenaar</p>
+                </div>
+            </div>
+
+            <div class="photo">
+                <h1 class="artistname">Max Frimout</h1>
+                <h2 class="artistgenre">NEUROFUNK</h2>
+            </div>
+
+            <div class="otherartists">
+
+                <p class="artistdesc">This artist sounds similar to some artists you love!</p>
+
+                <div class="overlayCSS overlayArtistinfo">
+                    <!-- Overlay als de gebruiker nog niet heeft ingelogd -->
+                    <div class="contentOverlay">
+                        <br><button onclick="loginRedirect()" class="questionmark questionmarkAi">?</button>
+                        <p class="loginText loginTextAi">Log in with Spotify to use this function!</p>
+                        <br><button class="loginButton loginButtonAi" onclick="loginRedirect()"><img src="spotifyLogo.png"
+                                class="loginbuttonLogo loginbuttonLogoAi">
+                            LOG IN</button>
+                    </div>
+                </div>
+
+                <div class="otherartistpic onzichtbaarLogin">
+                    <img class="otherartistpics" src="../img/artp1-modified.png">
+                    <p class="oap">Angela olsen</p>
+                </div>
+                <div class="otherartistpic onzichtbaarLogin"><img class="otherartistpics"
+                        src="../img/artp1-modified.png">
+                    <p class="oap">Angela olsen</p>
+                </div>
+                <div class="otherartistpic onzichtbaarLogin"><img class="otherartistpics"
+                        src="../img/artp1-modified.png">
+                    <p class="oap">Angela olsen</p>
+
+                </div>
+            </div>
+
+            <div class="spotify">
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/artist/4w7pwjdOFXrlfggOs52f4c?utm_source=generator" width="70%"
+                    height="205" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+        </div>
+    </div>
 </body>
+<script>
+    // 20 artists op vrijdag
+
+
+    // handmatig invoeren per artiest
+    // artiest 1 (starttijd, eindtijd, datum, artiestennaam, genre, venue)
+    var start1 = "20:00";
+    var end1 = "21:00";
+    var day1 = new Date("10/15/2021");
+    var artistname1 = document.getElementsByClassName('artistname1');
+    for (var i = 0; i < artistname1.length; i++) {
+        artistname1[i].innerHTML = "Commander Spoon";
+    }
+    document.getElementById("genre1").innerHTML = "Dark folk";
+    var venueArtist1 = 5;
+    // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
+
+    var blokArtist1Personal = document.getElementById("blokArtist1Personal");
+    var blokArtist1Full = document.getElementById("blokArtist1Full");
+
+
+    //Zorgen dat de artiesten in de full timetable bij de goede venue staan
+    if (venueArtist1 == 1) {
+        blokArtist1Full.style.marginTop = "24px";
+    } else if (venueArtist1 == 2) {
+        blokArtist1Full.style.marginTop = "61px";
+    } else if (venueArtist1 == 3) {
+        blokArtist1Full.style.marginTop = "98px";
+    } else if (venueArtist1 == 4) {
+        blokArtist1Full.style.marginTop = "135px";
+    } else if (venueArtist1 == 5) {
+        blokArtist1Full.style.marginTop = "172px";
+    } else if (venueArtist1 == 6) {
+        blokArtist1Full.style.marginTop = "209px";
+    } else {
+        console.write("error venue");
+    }
+
+    start1 = start1.split(":");
+    end1 = end1.split(":");
+
+    function diff(start1, end1) {
+
+        var start1Date = new Date(0, 0, 0, start1[0], start1[1], 0);
+        var end1Date = new Date(0, 0, 0, end1[0], end1[1], 0);
+        var diff = end1Date.getTime() - start1Date.getTime();
+        var hours = Math.floor(diff / 1000 / 60 / 60);
+        diff -= hours * 1000 * 60 * 60;
+        var minutes = Math.floor(diff / 1000 / 60);
+
+        var totalMinutes = (hours * 60) + minutes;
+
+        if (hours < 0)
+            hours = hours + 24;
+
+        return totalMinutes
+    }
+    console.log(diff(start1, end1));
+
+    // how long does the performance take? set the width
+    var widthArtist1 = diff(start1, end1) / 6 * 10;
+    blokArtist1Personal.style.width = widthArtist1 + "px";
+    blokArtist1Full.style.width = (widthArtist1 - 7) + "px";
+
+    //spot on the timeline: when does the performance start?
+    var marginLeftArtist1 = ((((start1[0] - 18) * 60)) / 6 * 10) + (start1[1] / 6 * 10) + 150;
+    blokArtist1Personal.style.marginLeft = marginLeftArtist1 + "px";
+    blokArtist1Full.style.marginLeft = (marginLeftArtist1 + 1) + "px";
+
+    // To calculate the time difference of two dates: in which timetable does it have to be?
+    // de laatste dag van het festival om te kunnen vergelijken:
+    var day0 = new Date("10/17/2021");
+
+    var Difference_In_Time = day1.getTime() - day0.getTime();
+    var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
+    if (Difference_In_Days == -2) {
+        //its friday
+        blokArtist1Personal.style.marginTop = "40px";
+    } else if (Difference_In_Days == -1) {
+        //its saturday
+        blokArtist1Personal.style.marginTop = "250px";
+    } else if (Difference_In_Days == 0) {
+        //its sunday
+        blokArtist1Personal.style.marginTop = "350px";
+    } else {
+        console.log("error days");
+    }
+
+
+
+
+
+
+
+    // Artist 2
+    var start2 = "18:00";
+    var end2 = "18:30";
+    var day2 = new Date("10/15/2021");
+    var artistname2 = document.getElementsByClassName('artistname2');
+    for (var i = 0; i < artistname2.length; i++) {
+        artistname2[i].innerHTML = "Max Frimout";
+    }
+    document.getElementById("genre2").innerHTML = "Dance";
+    var venueArtist2 = 2;
+    // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
+
+    var blokArtist2Personal = document.getElementById("blokArtist2Personal");
+    var blokArtist2Full = document.getElementById("blokArtist2Full");
+
+    if (venueArtist2 == 1) {
+        blokArtist2Full.style.marginTop = "24px";
+    } else if (venueArtist2 == 2) {
+        blokArtist2Full.style.marginTop = "61px";
+    } else if (venueArtist2 == 3) {
+        blokArtist2Full.style.marginTop = "98px";
+    } else if (venueArtist2 == 4) {
+        blokArtist2Full.style.marginTop = "135px";
+    } else if (venueArtist2 == 5) {
+        blokArtist2Full.style.marginTop = "172px";
+    } else if (venueArtist2 == 6) {
+        blokArtist2Full.style.marginTop = "209px";
+    } else {
+        console.write("error venue");
+    }
+
+    start2 = start2.split(":");
+    end2 = end2.split(":");
+
+    function diff(start2, end2) {
+
+        var start2Date = new Date(0, 0, 0, start2[0], start2[1], 0);
+        var end2Date = new Date(0, 0, 0, end2[0], end2[1], 0);
+        var diff = end2Date.getTime() - start2Date.getTime();
+        var hours = Math.floor(diff / 1000 / 60 / 60);
+        diff -= hours * 1000 * 60 * 60;
+        var minutes = Math.floor(diff / 1000 / 60);
+        var totalMinutes2 = (hours * 60) + minutes;
+
+        if (hours < 0)
+            hours = hours + 24;
+
+        return totalMinutes2
+    }
+
+    var widthArtist2 = diff(start2, end2) / 6 * 10;
+    blokArtist2Personal.style.width = widthArtist2 + "px";
+    blokArtist2Full.style.width = (widthArtist2 - 7) + "px";
+
+    var marginLeftArtist2 = ((((start2[0] - 18) * 60)) / 6 * 10) + (start2[1] / 6 * 10) + 150;
+    blokArtist2Personal.style.marginLeft = marginLeftArtist2 + "px";
+    blokArtist2Full.style.marginLeft = (marginLeftArtist2 + 1) + "px";
+
+    var Difference_In_Time2 = day2.getTime() - day0.getTime();
+    var Difference_In_Days2 = Difference_In_Time2 / (1000 * 3600 * 24);
+
+    if (Difference_In_Days2 == -2) {
+        //its friday
+        blokArtist2Personal.style.marginTop = "40px";
+    } else if (Difference_In_Days2 == -1) {
+        //its saturday
+        blokArtist2Personal.style.marginTop = "250px";
+    } else if (Difference_In_Days2 == 0) {
+        //its sunday
+        blokArtist2Personal.style.marginTop = "350px";
+    } else {
+        console.log("error days");
+    }
+
+
+
+    var start3 = "19:00";
+    var end3 = "20:00";
+    var day3 = new Date("10/15/2021");
+    var artistname3 = document.getElementsByClassName('artistname3');
+    for (var i = 0; i < artistname3.length; i++) {
+        artistname3[i].innerHTML = "Bastards Ball";
+    }
+    document.getElementById("genre3").innerHTML = "Idk";
+    var venueArtist3 = 1;
+    // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
+
+    var blokArtist3Personal = document.getElementById("blokArtist3Personal");
+    var blokArtist3Full = document.getElementById("blokArtist3Full");
+
+    if (venueArtist3 == 1) {
+        blokArtist3Full.style.marginTop = "24px";
+    } else if (venueArtist3 == 2) {
+        blokArtist3Full.style.marginTop = "61px";
+    } else if (venueArtist3 == 3) {
+        blokArtist3Full.style.marginTop = "98px";
+    } else if (venueArtist3 == 4) {
+        blokArtist3Full.style.marginTop = "135px";
+    } else if (venueArtist3 == 5) {
+        blokArtist3Full.style.marginTop = "172px";
+    } else if (venueArtist3 == 6) {
+        blokArtist3Full.style.marginTop = "209px";
+    } else {
+        console.write("error venue");
+    }
+
+    start3 = start3.split(":");
+    end3 = end3.split(":");
+
+    function diff(start3, end3) {
+
+        var start3Date = new Date(0, 0, 0, start3[0], start3[1], 0);
+        var end3Date = new Date(0, 0, 0, end3[0], end3[1], 0);
+        var diff = end3Date.getTime() - start3Date.getTime();
+        var hours = Math.floor(diff / 1000 / 60 / 60);
+        diff -= hours * 1000 * 60 * 60;
+        var minutes = Math.floor(diff / 1000 / 60);
+        var totalMinutes3 = (hours * 60) + minutes;
+
+        if (hours < 0)
+            hours = hours + 24;
+
+        return totalMinutes3
+    }
+
+    var widthArtist3 = diff(start3, end3) / 6 * 10;
+    blokArtist3Personal.style.width = widthArtist3 + "px";
+    blokArtist3Full.style.width = (widthArtist3 - 7) + "px";
+
+    var marginLeftArtist3 = ((((start3[0] - 18) * 60)) / 6 * 10) + (start3[1] / 6 * 10) + 150;
+    blokArtist3Personal.style.marginLeft = marginLeftArtist3 + "px";
+    blokArtist3Full.style.marginLeft = (marginLeftArtist3 + 1) + "px";
+
+    var Difference_In_Time3 = day3.getTime() - day0.getTime();
+    var Difference_In_Days3 = Difference_In_Time3 / (1000 * 3600 * 24);
+
+    if (Difference_In_Days3 == -2) {
+        //its friday
+        blokArtist3Personal.style.marginTop = "40px";
+    } else if (Difference_In_Days3 == -1) {
+        //its saturday
+        blokArtist3Personal.style.marginTop = "250px";
+    } else if (Difference_In_Days3 == 0) {
+        //its sunday
+        blokArtist3Personal.style.marginTop = "350px";
+    } else {
+        console.log("error days");
+    }
+
+
+
+    //Artist4
+
+    var start4 = "20:00";
+    var end4 = "21:00";
+    var day4 = new Date("10/15/2021");
+    var artistname4 = document.getElementsByClassName('artistname4');
+    for (var i = 0; i < artistname4.length; i++) {
+        artistname4[i].innerHTML = "ALORA";
+    }
+    document.getElementById("genre4").innerHTML = "Dance";
+    var venueArtist4 = 1;
+    // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
+
+    var blokArtist4Personal = document.getElementById("blokArtist4Personal");
+    var blokArtist4Full = document.getElementById("blokArtist4Full");
+
+    if (venueArtist4 == 1) {
+        blokArtist4Full.style.marginTop = "24px";
+    } else if (venueArtist4 == 2) {
+        blokArtist4Full.style.marginTop = "61px";
+    } else if (venueArtist4 == 3) {
+        blokArtist4Full.style.marginTop = "98px";
+    } else if (venueArtist4 == 4) {
+        blokArtist4Full.style.marginTop = "135px";
+    } else if (venueArtist4 == 5) {
+        blokArtist4Full.style.marginTop = "172px";
+    } else if (venueArtist4 == 6) {
+        blokArtist4Full.style.marginTop = "209px";
+    } else {
+        console.write("error venue");
+    }
+
+    start4 = start4.split(":");
+    end4 = end4.split(":");
+
+    function diff(start4, end4) {
+
+        var start4Date = new Date(0, 0, 0, start4[0], start4[1], 0);
+        var end4Date = new Date(0, 0, 0, end4[0], end4[1], 0);
+        var diff = end4Date.getTime() - start4Date.getTime();
+        var hours = Math.floor(diff / 1000 / 60 / 60);
+        diff -= hours * 1000 * 60 * 60;
+        var minutes = Math.floor(diff / 1000 / 60);
+        var totalMinutes4 = (hours * 60) + minutes;
+
+        if (hours < 0)
+            hours = hours + 24;
+
+        return totalMinutes4
+    }
+
+    var widthArtist4 = diff(start4, end4) / 6 * 10;
+    blokArtist4Personal.style.width = widthArtist4 + "px";
+    blokArtist4Full.style.width = (widthArtist4 - 7) + "px";
+
+    var marginLeftArtist4 = ((((start4[0] - 18) * 60)) / 6 * 10) + (start4[1] / 6 * 10) + 150;
+    blokArtist4Personal.style.marginLeft = marginLeftArtist4 + "px";
+    blokArtist4Full.style.marginLeft = (marginLeftArtist4 + 1) + "px";
+
+    var Difference_In_Time4 = day4.getTime() - day0.getTime();
+    var Difference_In_Days4 = Difference_In_Time4 / (1000 * 3600 * 24);
+
+    if (Difference_In_Days4 == -2) {
+        //its friday
+        blokArtist4Personal.style.marginTop = "40px";
+    } else if (Difference_In_Days4 == -1) {
+        //its saturday
+        blokArtist4Personal.style.marginTop = "250px";
+    } else if (Difference_In_Days4 == 0) {
+        //its sunday
+        blokArtist4Personal.style.marginTop = "350px";
+    } else {
+        console.log("error days");
+    }
+
+
+
+    //Artist5
+
+    var start5 = "21:00";
+    var end5 = "22:00";
+    var day5 = new Date("10/15/2021");
+    var artistname5 = document.getElementsByClassName('artistname5');
+    for (var i = 0; i < artistname5.length; i++) {
+        artistname5[i].innerHTML = "NCT";
+    }
+    document.getElementById("genre5").innerHTML = "Dance";
+    var venueArtist5 = 1;
+    // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
+
+    var blokArtist5Personal = document.getElementById("blokArtist5Personal");
+    var blokArtist5Full = document.getElementById("blokArtist5Full");
+
+    if (venueArtist5 == 1) {
+        blokArtist5Full.style.marginTop = "24px";
+    } else if (venueArtist5 == 2) {
+        blokArtist5Full.style.marginTop = "61px";
+    } else if (venueArtist5 == 3) {
+        blokArtist5Full.style.marginTop = "98px";
+    } else if (venueArtist5 == 4) {
+        blokArtist5Full.style.marginTop = "135px";
+    } else if (venueArtist5 == 5) {
+        blokArtist5Full.style.marginTop = "172px";
+    } else if (venueArtist5 == 6) {
+        blokArtist5Full.style.marginTop = "209px";
+    } else {
+        console.write("error venue");
+    }
+
+    start5 = start5.split(":");
+    end5 = end5.split(":");
+
+    function diff(start5, end5) {
+
+        var start5Date = new Date(0, 0, 0, start5[0], start5[1], 0);
+        var end5Date = new Date(0, 0, 0, end5[0], end5[1], 0);
+        var diff = end5Date.getTime() - start5Date.getTime();
+        var hours = Math.floor(diff / 1000 / 60 / 60);
+        diff -= hours * 1000 * 60 * 60;
+        var minutes = Math.floor(diff / 1000 / 60);
+        var totalMinutes5 = (hours * 60) + minutes;
+
+        if (hours < 0)
+            hours = hours + 24;
+
+        return totalMinutes5
+    }
+
+    var widthArtist5 = diff(start5, end5) / 6 * 10;
+    blokArtist5Personal.style.width = widthArtist5 + "px";
+    blokArtist5Full.style.width = (widthArtist5 - 7) + "px";
+
+    var marginLeftArtist5 = ((((start5[0] - 18) * 60)) / 6 * 10) + (start5[1] / 6 * 10) + 150;
+    blokArtist5Personal.style.marginLeft = marginLeftArtist5 + "px";
+    blokArtist5Full.style.marginLeft = (marginLeftArtist5 + 1) + "px";
+
+    var Difference_In_Time5 = day5.getTime() - day0.getTime();
+    var Difference_In_Days5 = Difference_In_Time5 / (1000 * 3600 * 24);
+
+    if (Difference_In_Days5 == -2) {
+        //its friday
+        blokArtist5Personal.style.marginTop = "40px";
+    } else if (Difference_In_Days5 == -1) {
+        //its saturday
+        blokArtist5Personal.style.marginTop = "250px";
+    } else if (Difference_In_Days5 == 0) {
+        //its sunday
+        blokArtist5Personal.style.marginTop = "350px";
+    } else {
+        console.log("error days");
+    }
+</script>
+
 </html>
