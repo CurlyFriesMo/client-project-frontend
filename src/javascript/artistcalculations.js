@@ -1,5 +1,204 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
+        // artiest 1 (starttijd, eindtijd, datum, artiestennaam, genre, venue)
+        var start1 = "20:00";
+        var end1 = "21:00";
+        var day1 = new Date("10/15/2021");
+        var artistname1 = document.getElementsByClassName('artistname1');
+        for (var i = 0; i < artistname1.length; i++) {
+            artistname1[i].innerHTML = "Commander Spoon";
+        }
+        document.getElementById("genre1").innerHTML = "Dark folk";
+        var venueArtist1 = 5;
+        // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
+    
+        var blokArtist1Personal = document.getElementById("blokArtist1Personal");
+        var blokArtist1Full = document.getElementById("blokArtist1Full");
+    
+    
+        //Zorgen dat de artiesten in de full timetable bij de goede venue staan
+        if (venueArtist1 == 1) {
+            blokArtist1Full.style.marginTop = "24px";
+        } else if (venueArtist1 == 2) {
+            blokArtist1Full.style.marginTop = "61px";
+        } else if (venueArtist1 == 3) {
+            blokArtist1Full.style.marginTop = "98px";
+        } else if (venueArtist1 == 4) {
+            blokArtist1Full.style.marginTop = "135px";
+        } else if (venueArtist1 == 5) {
+            blokArtist1Full.style.marginTop = "172px";
+        } else if (venueArtist1 == 6) {
+            blokArtist1Full.style.marginTop = "209px";
+        } else {
+            console.write("error venue");
+        }
+    
+        start1 = start1.split(":");
+        end1 = end1.split(":");
+    
+        function diff(start1, end1) {
+    
+            var start1Date = new Date(0, 0, 0, start1[0], start1[1], 0);
+            var end1Date = new Date(0, 0, 0, end1[0], end1[1], 0);
+            var diff = end1Date.getTime() - start1Date.getTime();
+            var hours = Math.floor(diff / 1000 / 60 / 60);
+            diff -= hours * 1000 * 60 * 60;
+            var minutes = Math.floor(diff / 1000 / 60);
+    
+            var totalMinutes = (hours * 60) + minutes;
+    
+            if (hours < 0)
+                hours = hours + 24;
+    
+            return totalMinutes
+        }
+        console.log(diff(start1, end1));
+    
+        // how long does the performance take? set the width
+        var widthArtist1 = diff(start1, end1) / 6 * 10;
+        blokArtist1Personal.style.width = widthArtist1 + "px";
+        blokArtist1Full.style.width = (widthArtist1 - 7) + "px";
+    
+        //spot on the timeline: when does the performance start?
+        var marginLeftArtist1 = ((((start1[0] - 18) * 60)) / 6 * 10) + (start1[1] / 6 * 10) + 150;
+        blokArtist1Personal.style.marginLeft = marginLeftArtist1 + "px";
+        blokArtist1Full.style.marginLeft = (marginLeftArtist1 + 1) + "px";
+    
+        // To calculate the time difference of two dates: in which timetable does it have to be?
+        // de laatste dag van het festival om te kunnen vergelijken:
+        var day0 = new Date("10/17/2021");
+    
+        var Difference_In_Time = day1.getTime() - day0.getTime();
+        var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+    
+        if (Difference_In_Days == -2) {
+            //its friday
+            blokArtist1Personal.style.marginTop = "40px";
+        } else if (Difference_In_Days == -1) {
+            //its saturday
+            blokArtist1Personal.style.marginTop = "250px";
+        } else if (Difference_In_Days == 0) {
+            //its sunday
+            blokArtist1Personal.style.marginTop = "350px";
+        } else {
+            console.log("error days");
+        }
+    
+    
+    
+    
+    
+    
+    
+        // Artist 2
+        var start2 = "18:00";
+        var end2 = "18:30";
+        var day2 = new Date("10/15/2021");
+        var artistname2 = document.getElementsByClassName('artistname2');
+        for (var i = 0; i < artistname2.length; i++) {
+            artistname2[i].innerHTML = "Max Frimout";
+        }
+        document.getElementById("genre2").innerHTML = "Dance";
+        var venueArtist2 = 2;
+        // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
+    
+        var blokArtist2Personal = document.getElementById("blokArtist2Personal");
+        var blokArtist2Full = document.getElementById("blokArtist2Full");
+    
+        if (venueArtist2 == 1) {
+            blokArtist2Full.style.marginTop = "24px";
+        } else if (venueArtist2 == 2) {
+            blokArtist2Full.style.marginTop = "61px";
+        } else if (venueArtist2 == 3) {
+            blokArtist2Full.style.marginTop = "98px";
+        } else if (venueArtist2 == 4) {
+            blokArtist2Full.style.marginTop = "135px";
+        } else if (venueArtist2 == 5) {
+            blokArtist2Full.style.marginTop = "172px";
+        } else if (venueArtist2 == 6) {
+            blokArtist2Full.style.marginTop = "209px";
+        } else {
+            console.write("error venue");
+        }
+    
+        start2 = start2.split(":");
+        end2 = end2.split(":");
+    
+        function diff(start2, end2) {
+    
+            var start2Date = new Date(0, 0, 0, start2[0], start2[1], 0);
+            var end2Date = new Date(0, 0, 0, end2[0], end2[1], 0);
+            var diff = end2Date.getTime() - start2Date.getTime();
+            var hours = Math.floor(diff / 1000 / 60 / 60);
+            diff -= hours * 1000 * 60 * 60;
+            var minutes = Math.floor(diff / 1000 / 60);
+            var totalMinutes2 = (hours * 60) + minutes;
+    
+            if (hours < 0)
+                hours = hours + 24;
+    
+            return totalMinutes2
+        }
+    
+        var widthArtist2 = diff(start2, end2) / 6 * 10;
+        blokArtist2Personal.style.width = widthArtist2 + "px";
+        blokArtist2Full.style.width = (widthArtist2 - 7) + "px";
+    
+        var marginLeftArtist2 = ((((start2[0] - 18) * 60)) / 6 * 10) + (start2[1] / 6 * 10) + 150;
+        blokArtist2Personal.style.marginLeft = marginLeftArtist2 + "px";
+        blokArtist2Full.style.marginLeft = (marginLeftArtist2 + 1) + "px";
+    
+        var Difference_In_Time2 = day2.getTime() - day0.getTime();
+        var Difference_In_Days2 = Difference_In_Time2 / (1000 * 3600 * 24);
+    
+        if (Difference_In_Days2 == -2) {
+            //its friday
+            blokArtist2Personal.style.marginTop = "40px";
+        } else if (Difference_In_Days2 == -1) {
+            //its saturday
+            blokArtist2Personal.style.marginTop = "250px";
+        } else if (Difference_In_Days2 == 0) {
+            //its sunday
+            blokArtist2Personal.style.marginTop = "350px";
+        } else {
+            console.log("error days");
+        }
+    
+    
+    
+        var start3 = "19:00";
+        var end3 = "20:00";
+        var day3 = new Date("10/15/2021");
+        var artistname3 = document.getElementsByClassName('artistname3');
+        for (var i = 0; i < artistname3.length; i++) {
+            artistname3[i].innerHTML = "Bastards Ball";
+        }
+        document.getElementById("genre3").innerHTML = "Idk";
+        var venueArtist3 = 1;
+        // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
+    
+        var blokArtist3Personal = document.getElementById("blokArtist3Personal");
+        var blokArtist3Full = document.getElementById("blokArtist3Full");
+    
+        if (venueArtist3 == 1) {
+            blokArtist3Full.style.marginTop = "24px";
+        } else if (venueArtist3 == 2) {
+            blokArtist3Full.style.marginTop = "61px";
+        } else if (venueArtist3 == 3) {
+            blokArtist3Full.style.marginTop = "98px";
+        } else if (venueArtist3 == 4) {
+            blokArtist3Full.style.marginTop = "135px";
+        } else if (venueArtist3 == 5) {
+            blokArtist3Full.style.marginTop = "172px";
+        } else if (venueArtist3 == 6) {
+            blokArtist3Full.style.marginTop = "209px";
+        } else {
+            console.write("error venue");
+        }
+
+
+
+        // Artist 3
             var start3 = "19:00";
             var end3 = "20:00";
             var day3 = new Date("10/15/2021");

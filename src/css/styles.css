@@ -393,3 +393,111 @@ table {
     position: absolute;
     border-top: 1px solid #4b4e4a3f;
 }
+
+.onzichtbaarLogin {
+    display: none;
+}
+
+.overlayCSS {
+    background-color: rgb(255, 255, 255);
+    opacity: 95%;
+    position: absolute;
+}
+
+.overlayTimetable {
+    height: 160px;
+    width: 598px;
+    margin-left: 151px;
+    margin-top: 35px;
+    border: solid 1px #4B4E4A;
+}
+
+.overlayArtistinfo {
+    height: 80px;
+    width: 435px;
+    padding-bottom: 7px;
+    margin-left: 70px;
+    margin-top: -7px;
+    padding-top: 0px;
+}
+
+.contentOverlay {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #4B4E4A;
+}
+
+.loginButton {
+    background-image: linear-gradient(to right, #D99B59, #CD7454);
+    color: white;
+    border-radius: 32px;
+    border: none;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    font-family: 'Staatliches', cursive;
+}
+
+.loginText {
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    color: #4B4E4A;
+}
+
+.questionmark {
+    border-radius: 50%;
+    background-color: white;
+    border: 1px solid #4B4E4A;
+}
+
+.loginTextAi {
+    font-size: 12px;
+    margin-bottom: -10px;
+    margin-top: 0px;
+}
+
+.questionmarkAi {
+    margin-top: -13px;
+    margin-left: 410px;
+    position: absolute;
+    font-size: 12px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.loginbuttonLogoAi {
+    width: 14px;
+    padding-left: 8px;
+    padding-right: 15px;
+    margin-top: 3px;
+}
+
+.loginButtonAi {
+    padding-top: 4px;
+    padding-bottom: 4px;
+    font-size: 17px;
+    padding-right: 35px;
+}
+
+.loginButtonTt {
+    padding-top: 11px;
+    padding-bottom: 8px;
+    font-size: 22px;
+    padding-right: 60px;
+}
+
+.loginTextTt {
+    font-size: 18px;
+    margin-bottom: 0px;
+}
+
+.questionmarkTt {
+    float: right;
+    margin-top: -12px;
+    margin-right: 10px;
+}
+
+.loginbuttonLogoTt {
+    width: 21px;
+    padding-left: 10px;
+    padding-right: 25px;
+}
