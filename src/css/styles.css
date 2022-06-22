@@ -335,6 +335,7 @@ table {
 }
 
 .blokArtistPersonal {
+    display: none;
     background-color: white;
     height: 160px;
     position: absolute;
