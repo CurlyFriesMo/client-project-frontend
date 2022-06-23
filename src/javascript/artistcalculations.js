@@ -3,23 +3,23 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 
 
-        
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
 
 
 
 
-
-
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
         // artiest 1 (starttijd, eindtijd, datum, artiestennaam, genre, venue)
         // var start1 = "20:00";
         // var end1 = "21:00";
@@ -31,11 +31,11 @@ document.addEventListener("DOMContentLoaded", function (event) {
         // document.getElementById("genre1").innerHTML = "Dark folk";
         // var venueArtist1 = 5;
         // // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
-    
+        //
         // var blokArtist1Personal = document.getElementById("blokArtist1Personal");
         // var blokArtist1Full = document.getElementById("blokArtist1Full");
-    
-    
+        //
+        //
         // //Zorgen dat de artiesten in de full timetable bij de goede venue staan
         // if (venueArtist1 == 1) {
         //     blokArtist1Full.style.marginTop = "24px";
@@ -52,45 +52,45 @@ document.addEventListener("DOMContentLoaded", function (event) {
         // } else {
         //     console.write("error venue");
         // }
-    
+        //
         // start1 = start1.split(":");
         // end1 = end1.split(":");
-    
+        //
         // function diff(start1, end1) {
-    
+        //
         //     var start1Date = new Date(0, 0, 0, start1[0], start1[1], 0);
         //     var end1Date = new Date(0, 0, 0, end1[0], end1[1], 0);
         //     var diff = end1Date.getTime() - start1Date.getTime();
         //     var hours = Math.floor(diff / 1000 / 60 / 60);
         //     diff -= hours * 1000 * 60 * 60;
         //     var minutes = Math.floor(diff / 1000 / 60);
-    
+        //
         //     var totalMinutes = (hours * 60) + minutes;
-    
+        //
         //     if (hours < 0)
         //         hours = hours + 24;
-    
+        //
         //     return totalMinutes
         // }
         // console.log(diff(start1, end1));
-    
+        //
         // // how long does the performance take? set the width
         // var widthArtist1 = diff(start1, end1) / 6 * 10;
         // blokArtist1Personal.style.width = widthArtist1 + "px";
         // blokArtist1Full.style.width = (widthArtist1 - 7) + "px";
-    
+        //
         // //spot on the timeline: when does the performance start?
         // var marginLeftArtist1 = ((((start1[0] - 18) * 60)) / 6 * 10) + (start1[1] / 6 * 10) + 150;
         // blokArtist1Personal.style.marginLeft = marginLeftArtist1 + "px";
         // blokArtist1Full.style.marginLeft = (marginLeftArtist1 + 1) + "px";
-    
+        //
         // // To calculate the time difference of two dates: in which timetable does it have to be?
         // // de laatste dag van het festival om te kunnen vergelijken:
         // var day0 = new Date("10/17/2021");
-    
+        //
         // var Difference_In_Time = day1.getTime() - day0.getTime();
         // var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
-    
+        //
         // if (Difference_In_Days == -2) {
         //     //its friday
         //     blokArtist1Personal.style.marginTop = "40px";
@@ -103,10 +103,10 @@ document.addEventListener("DOMContentLoaded", function (event) {
         // } else {
         //     console.log("error days");
         // }
-    
-    
-    
-    
+        //
+        //
+        //
+        //
     
     
     

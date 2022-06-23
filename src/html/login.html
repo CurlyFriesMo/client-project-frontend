@@ -12,7 +12,6 @@
         rel="stylesheet">
 
     <link href="../css/styles.css" rel="stylesheet">
-    <script src="../javascript/getInfo.js"></script>
     <script src="../javascript/artistcalculations.js"></script>
     <script src="../javascript/main.js"></script>
 
@@ -244,10 +243,11 @@
                     </table>
                 </div>
             </div>
+
             <div class="fullTt">
                 <h2 class="font2 grey">full timetable</h2>
 
-                <div class="blokArtistFull" id="blokArtist1Full">
+                <div class="blokArtistFull" id="blokArtist1Full" onclick="artist1clicked()">
                     <p class="artistname1">Artist name</p>
                 </div>
 
@@ -268,7 +268,7 @@
                 <div class="blokArtistFull" id="blokArtist6Full">
                     <p class="artistname6">Artist name</p>
                 </div>
-                <div class="blokArtistFull" id="blokArtist7Full">
+                <div class="blokArtistFull" id="blokArtist7Full" onclick="artist7clicked()">
                     <p class="artistname7">Artist name</p>
                 </div>
 
@@ -529,7 +529,7 @@
                     </tr>
                     <tr class="bgOranjeHtc">
                         <td class="borderSolid" height="35">
-                            <p class="venueFullTt">Altstadt</p>
+                            <p class="venueFullTt" id="ttSaturday">Altstadt</p>
                         </td>
                         <td class="borderDotted" height="35">
                         </td>
@@ -561,6 +561,324 @@
                     </tr>
                 </table>
             </div>
+
+            <!--            <div class="fullTt">-->
+<!--                <h2 class="font2 grey">full timetable</h2>-->
+
+<!--                <div class="blokArtistFull" id="blokArtist1Full">-->
+<!--                    <p class="artistname1">Artist name</p>-->
+<!--                </div>-->
+
+<!--                <div class="blokArtistFull" id="blokArtist2Full">-->
+<!--                    <p class="artistname2">Artist name</p>-->
+<!--                </div>-->
+<!--                <div class="blokArtistFull" id="blokArtist3Full">-->
+<!--                    <p class="artistname3">Artist name</p>-->
+<!--                </div>-->
+
+<!--                <div class="blokArtistFull" id="blokArtist4Full">-->
+<!--                    <p class="artistname4">Artist name</p>-->
+<!--                </div>-->
+<!--                <div class="blokArtistFull" id="blokArtist5Full">-->
+<!--                    <p class="artistname5">Artist name</p>-->
+<!--                </div>-->
+
+<!--                <div class="blokArtistFull" id="blokArtist6Full">-->
+<!--                    <p class="artistname6">Artist name</p>-->
+<!--                </div>-->
+<!--                <div class="blokArtistFull" id="blokArtist7Full">-->
+<!--                    <p class="artistname7">Artist name</p>-->
+<!--                </div>-->
+
+<!--                <div class="blokArtistFull" id="blokArtist8Full">-->
+<!--                    <p class="artistname8">Artist name</p>-->
+<!--                </div>-->
+<!--                <div class="blokArtistFull" id="blokArtist9Full">-->
+<!--                    <p class="artistname9">Artist name</p>-->
+<!--                </div>-->
+
+<!--                <div class="blokArtistFull" id="blokArtist10Full">-->
+<!--                    <p class="artistname10">Artist name</p>-->
+<!--                </div>-->
+<!--                <div class="blokArtistFull" id="blokArtist11Full">-->
+<!--                    <p class="artistname11">Artist name</p>-->
+<!--                </div>-->
+
+<!--                <div class="blokArtistFull" id="blokArtist12Full">-->
+<!--                    <p class="artistname12">Artist name</p>-->
+<!--                </div>-->
+<!--                <div class="blokArtistFull" id="blokArtist13Full">-->
+<!--                    <p class="artistname13">Artist name</p>-->
+<!--                </div>-->
+
+<!--                <div class="blokArtistFull" id="blokArtist14Full">-->
+<!--                    <p class="artistname14">Artist name</p>-->
+<!--                </div>-->
+<!--                <div class="blokArtistFull" id="blokArtist15Full">-->
+<!--                    <p class="artistname15">Artist name</p>-->
+<!--                </div>-->
+
+<!--                <div class="blokArtistFull" id="blokArtist16Full">-->
+<!--                    <p class="artistname16">Artist name</p>-->
+<!--                </div>-->
+<!--                <div class="blokArtistFull" id="blokArtist17Full">-->
+<!--                    <p class="artistname17">Artist name</p>-->
+<!--                </div>-->
+
+<!--                <div class="blokArtistFull" id="blokArtist18Full">-->
+<!--                    <p class="artistname18">Artist name</p>-->
+<!--                </div>-->
+<!--                <div class="blokArtistFull" id="blokArtist19Full">-->
+<!--                    <p class="artistname19">Artist name</p>-->
+<!--                </div>-->
+
+<!--                <div class="blokArtistFull" id="blokArtist20Full">-->
+<!--                    <p class="artistname20">Artist name</p>-->
+<!--                </div>-->
+
+<!--                <table border="0" cellspacing="0">-->
+
+<!--                    <tr>-->
+<!--                        &lt;!&ndash; Dit is niet zichtbaar. Het zorgt er alleen voor dat de tijden kloppen met de lijnen &ndash;&gt;-->
+<!--                        <td height="1" width="150"></td>-->
+<!--                        <td class="h1w50"></td>-->
+<!--                        <td class="h1w50"></td>-->
+<!--                        <td class="h1w50"></td>-->
+<!--                        <td class="h1w50"></td>-->
+<!--                        <td class="h1w50"></td>-->
+<!--                        <td class="h1w50"></td>-->
+<!--                        <td class="h1w50"></td>-->
+<!--                        <td class="h1w50"></td>-->
+<!--                        <td class="h1w50"></td>-->
+<!--                        <td class="h1w50"></td>-->
+<!--                        <td class="h1w50"></td>-->
+<!--                        <td class="h1w50"></td>-->
+<!--                        <td class="h1w50"></td>-->
+<!--                    </tr>-->
+
+<!--                    <tr>-->
+<!--                        &lt;!&ndash; Hier worden de uren aangegeven boven de timetables &ndash;&gt;-->
+<!--                        <td class="tijdenTt zesuur" colspan="2">-->
+<!--                            <b>18:00</b>-->
+<!--                        </td>-->
+<!--                        <td class="tijdenTt" align="center" colspan="2">-->
+<!--                            <b>19:00</b>-->
+<!--                        </td>-->
+<!--                        </td>-->
+<!--                        <td class="tijdenTt" align="center" colspan="2">-->
+<!--                            <b>20.00</b>-->
+<!--                        </td>-->
+<!--                        </td>-->
+<!--                        <td class="tijdenTt" align="center" colspan="2">-->
+<!--                            <b>21:00</b>-->
+<!--                        </td>-->
+<!--                        <td class="tijdenTt" align="center" colspan="2">-->
+<!--                            <b>22:00</b>-->
+<!--                        </td>-->
+<!--                        </td>-->
+<!--                        <td class="tijdenTt" align="center" colspan="2">-->
+<!--                            <b>23:00</b>-->
+<!--                        </td>-->
+<!--                        </td>-->
+<!--                        <td class="tijdenTt" align="center" colspan="2">-->
+<!--                            <b>00:00</b>-->
+<!--                        </td>-->
+<!--                    </tr>-->
+
+<!--                    <tr class="bgRozeHtc">-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                            <p class="venueFullTt">Effenaar</p>-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td>-->
+<!--                        </td>-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr class="bgOranjeHtc">-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                            <p class="venueFullTt">Subbar</p>-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td>-->
+<!--                        </td>-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr class="bgRozeHtc">-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                            <p class="venueFullTt">Stroomhuis</p>-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td>-->
+<!--                        </td>-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr class="bgOranjeHtc">-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                            <p class="venueFullTt">Fifth</p>-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td>-->
+<!--                        </td>-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr class="bgRozeHtc">-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                            <p class="venueFullTt">Dynamo</p>-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td>-->
+<!--                        </td>-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                    <tr class="bgOranjeHtc">-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                            <p class="venueFullTt">Altstadt</p>-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderDotted" height="35">-->
+<!--                        </td>-->
+<!--                        <td class="borderSolid" height="35">-->
+<!--                        </td>-->
+<!--                        <td>-->
+<!--                        </td>-->
+<!--                        <td></td>-->
+<!--                    </tr>-->
+<!--                </table>-->
+<!--            </div>-->
         </div>
         <div class="artistinfo">
             <div class="topsection">
@@ -618,5 +936,243 @@
             </div>
         </div>
     </div>
+
+    <script>
+        // artiest 1 (starttijd, eindtijd, datum, artiestennaam, genre, venue)
+
+        var genreArtist1 = "Dark folk";
+        var nameOfArtist1 = "Commander Spoon";
+        var start1 = "20:00";
+        var end1 = "21:00";
+        var day1 = new Date("10/15/2021");
+        var venueArtist1 = 5;
+        // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
+
+
+
+
+        var artistname1 = document.getElementsByClassName('artistname1');
+        for (var i = 0; i < artistname1.length; i++) {
+            artistname1[i].innerHTML = nameOfArtist1;
+        }
+        document.getElementById("genre1").innerHTML = genreArtist1;
+
+        var blokArtist1Personal = document.getElementById("blokArtist1Personal");
+        var blokArtist1Full = document.getElementById("blokArtist1Full");
+
+
+        //Zorgen dat de artiesten in de full timetable bij de goede venue staan
+        if (venueArtist1 == 1) {
+            blokArtist1Full.style.marginTop = "24px";
+            var venue1 = "Effenaar";
+        } else if (venueArtist1 == 2) {
+            blokArtist1Full.style.marginTop = "61px";
+            var venue1 = "Subbar";
+        } else if (venueArtist1 == 3) {
+            blokArtist1Full.style.marginTop = "98px";
+            var venue1 = "Stroomhuis";
+        } else if (venueArtist1 == 4) {
+            blokArtist1Full.style.marginTop = "135px";
+            var venue1 = "Fifth";
+        } else if (venueArtist1 == 5) {
+            blokArtist1Full.style.marginTop = "172px";
+            var venue1 = "Dynamo";
+        } else if (venueArtist1 == 6) {
+            blokArtist1Full.style.marginTop = "209px";
+            var venue1 = "Altstadt";
+        } else {
+            console.write("error venue");
+        }
+
+        start1 = start1.split(":");
+        end1 = end1.split(":");
+
+        function diff(start1, end1) {
+
+            var start1Date = new Date(0, 0, 0, start1[0], start1[1], 0);
+            var end1Date = new Date(0, 0, 0, end1[0], end1[1], 0);
+            var diff = end1Date.getTime() - start1Date.getTime();
+            var hours = Math.floor(diff / 1000 / 60 / 60);
+            diff -= hours * 1000 * 60 * 60;
+            var minutes = Math.floor(diff / 1000 / 60);
+
+            var totalMinutes = (hours * 60) + minutes;
+
+            if (hours < 0)
+                hours = hours + 24;
+
+            return totalMinutes
+        }
+        console.log(diff(start1, end1));
+
+        // how long does the performance take? set the width
+        var widthArtist1 = diff(start1, end1) / 6 * 10;
+        blokArtist1Personal.style.width = widthArtist1 + "px";
+        blokArtist1Full.style.width = (widthArtist1 - 7) + "px";
+
+        //spot on the timeline: when does the performance start?
+        var marginLeftArtist1 = ((((start1[0] - 18) * 60)) / 6 * 10) + (start1[1] / 6 * 10) + 150;
+        blokArtist1Personal.style.marginLeft = marginLeftArtist1 + "px";
+        blokArtist1Full.style.marginLeft = (marginLeftArtist1 + 1) + "px";
+
+        // To calculate the time difference of two dates: in which timetable does it have to be?
+        // de laatste dag van het festival om te kunnen vergelijken:
+        var day0 = new Date("10/17/2021");
+
+        var Difference_In_Time = day1.getTime() - day0.getTime();
+        var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+
+        if (Difference_In_Days == -2) {
+            //its friday
+            blokArtist1Personal.style.marginTop = "40px";
+        } else if (Difference_In_Days == -1) {
+            //its saturday
+            blokArtist1Personal.style.marginTop = "250px";
+        } else if (Difference_In_Days == 0) {
+            //its sunday
+            blokArtist1Personal.style.marginTop = "350px";
+        } else {
+            console.log("error days");
+        }
+
+        var tijdEnLocatie1 = start1[0] + ":" + start1[1] + "-" + end1[0] + ":" + end1[1];
+
+        function artist1clicked() {
+            document.getElementById("timeInfo").innerHTML = tijdEnLocatie1;
+            document.getElementById("LocationInfo").innerHTML = venue1;
+            document.getElementById("artistnameInfo").innerHTML = nameOfArtist1;
+            document.getElementById("artistgenreInfo").innerHTML = genreArtist1;
+            document.getElementById("blokArtist1Full").style.border = "5px solid";
+            document.getElementById("blokArtist1Full").style.borderImage =
+                "linear-gradient(var(--angle), #8CFBDE, #FF99A5, #7D80DA) 1";
+
+            document.getElementById("blokArtist1Personal").style.border = "5px solid";
+            document.getElementById("blokArtist1Personal").style.borderImage =
+                "linear-gradient(var(--angle), #8CFBDE, #FF99A5, #7D80DA) 1";
+
+            document.getElementById("blokArtist7Fulll").style.border = "0px solid";
+            document.getElementById("blokArtist7Personal").style.border = "0px solid";
+        }
+
+
+
+
+
+
+
+
+
+        //Artist7
+
+
+        var genreArtist7 = "Indie";
+        var nameOfArtist7 = "ITem";
+        var start7 = "18:30";
+        var end7 = "19:30";
+        var day7 = new Date("10/15/2021");
+        var venueArtist7 = 2;
+        // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
+
+
+
+
+        var artistname7 = document.getElementsByClassName('artistname7');
+        for (var i = 0; i < artistname7.length; i++) {
+            artistname7[i].innerHTML = nameOfArtist7;
+        }
+        document.getElementById("genre7").innerHTML = genreArtist7;
+
+
+        var blokArtist7Personal = document.getElementById("blokArtist7Personal");
+        var blokArtist7Full = document.getElementById("blokArtist7Full");
+
+        if (venueArtist7 == 1) {
+            blokArtist7Full.style.marginTop = "24px";
+            var venue7 = "Effenaar";
+        } else if (venueArtist7 == 2) {
+            blokArtist7Full.style.marginTop = "61px";
+            var venue7 = "Subbar";
+        } else if (venueArtist7 == 3) {
+            blokArtist7Full.style.marginTop = "98px";
+            var venue7 = "Stroomhuis";
+        } else if (venueArtist7 == 4) {
+            blokArtist7Full.style.marginTop = "135px";
+            var venue7 = "Fifth";
+        } else if (venueArtist7 == 5) {
+            blokArtist7Full.style.marginTop = "172px";
+            var venue7 = "Dynamo";
+        } else if (venueArtist7 == 6) {
+            blokArtist7Full.style.marginTop = "209px";
+            var venue7 = "Altstadt";
+        } else {
+            console.write("error venue");
+        }
+
+
+
+        start7 = start7.split(":");
+        end7 = end7.split(":");
+
+        function diff(start7, end7) {
+
+            var start7Date = new Date(0, 0, 0, start7[0], start7[1], 0);
+            var end7Date = new Date(0, 0, 0, end7[0], end7[1], 0);
+            var diff = end7Date.getTime() - start7Date.getTime();
+            var hours = Math.floor(diff / 1000 / 60 / 60);
+            diff -= hours * 1000 * 60 * 60;
+            var minutes = Math.floor(diff / 1000 / 60);
+            var totalMinutes7 = (hours * 60) + minutes;
+
+            if (hours < 0)
+                hours = hours + 24;
+
+            return totalMinutes7
+        }
+
+        var widthArtist7 = diff(start7, end7) / 6 * 10;
+        blokArtist7Personal.style.width = widthArtist7 + "px";
+        blokArtist7Full.style.width = (widthArtist7 - 7) + "px";
+
+        var marginLeftArtist7 = ((((start7[0] - 18) * 60)) / 6 * 10) + (start7[1] / 6 * 10) + 150;
+        blokArtist7Personal.style.marginLeft = marginLeftArtist7 + "px";
+        blokArtist7Full.style.marginLeft = (marginLeftArtist7 + 1) + "px";
+
+        var Difference_In_Time7 = day7.getTime() - day0.getTime();
+        var Difference_In_Days7 = Difference_In_Time7 / (1000 * 3600 * 24);
+
+        if (Difference_In_Days7 == -2) {
+            blokArtist7Personal.style.marginTop = "40px";
+        } else if (Difference_In_Days7 == -1) {
+            blokArtist7Personal.style.marginTop = "250px";
+        } else if (Difference_In_Days7 == 0) {
+            blokArtist7Personal.style.marginTop = "350px";
+        } else {
+            console.log("error days");
+        }
+
+        var tijdEnLocatie7 = start7[0] + ":" + start7[1] + "-" + end7[0] + ":" + end7[1];
+
+
+        function artist7clicked() {
+            /* document.getElementById("timeLocationInfo").innerHTML = <i class="fa-solid fa-clock"></i> + start1[0] + ":" + start[1] + " " +
+            <i class="fa-solid fa-location-pin"></i> + venueArtist1; */
+            document.getElementById("timeInfo").innerHTML = tijdEnLocatie7;
+            document.getElementById("LocationInfo").innerHTML = venue7;
+            document.getElementById("artistnameInfo").innerHTML = nameOfArtist7;
+            document.getElementById("artistgenreInfo").innerHTML = genreArtist7;
+            document.getElementById("blokArtist7Full").style.border = "5px solid";
+            document.getElementById("blokArtist7Full").style.borderImage =
+                "linear-gradient(var(--angle), #8CFBDE, #FF99A5, #7D80DA) 1";
+
+            document.getElementById("blokArtist7Personal").style.border = "5px solid";
+            document.getElementById("blokArtist7Personal").style.borderImage =
+                "linear-gradient(var(--angle), #8CFBDE, #FF99A5, #7D80DA) 1";
+
+            /* document.getElementById("blokArtist1Fulll").style.border = "0px solid";
+            document.getElementById("blokArtist1Personal").style.border = "0px solid"; */
+            document.getElementById("blokArtist1Fulll").style.border = "none";
+        }
+
+    </script>
 </body>
 </html>
