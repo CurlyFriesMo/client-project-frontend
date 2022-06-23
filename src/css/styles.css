@@ -489,3 +489,59 @@ table {
     padding-left: 10px;
     padding-right: 25px;
 }
+
+.artistinfo2 {
+    margin-right: 6em;
+    margin-left: 50px;
+    width: 560px;
+    height: 655px;
+    margin-top: 30px;
+    background: linear-gradient(-45deg, #CD7454, #FFD1D6, #D99B59);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+
+.photo2 {
+    height: 170px;
+    background-image: url("../img/maxfrimout.jpg");
+    background-repeat: no-repeat;
+    background-position: right;
+    -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)))
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.inline {
+    display: inline-block;
+}
+
+.grey {
+    text-decoration: none;
+}
+
+.blokArtistPersonal:hover {
+    box-shadow: 1px 0px 5px 2px #7D80DA;
+    transform: scale(1.02);
+}
+
+.blokArtistFull:hover {
+    box-shadow: 1px 0px 5px 2px #7D80DA;
+    transform: scale(1.02);
+}

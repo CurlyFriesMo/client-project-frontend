@@ -31,14 +31,16 @@
             <h3 class="headerTitle font1">Timetables</h3>
             <div class="headerNav">
                 <span class="headerNavContent navSatSun">2021 &#x25BC; </span>
-                <span class="headerNavContent navFriday">FRIDAY OCT 15 </span>
-                <span class="headerNavContent navSatSun">SATURDAY OCT 16</span>
-                <span class="headerNavContent navSatSun">SUNDAY OCT 17</span>
+                <a href="#ttFriday" class="grey"><span class="headerNavContent navFriday">FRIDAY OCT 15 </span></a>
+                <a href="#ttSaturday" class="grey">
+                    <span class="headerNavContent navSatSun">SATURDAY OCT 16</span></a>
+                <a href="#ttSunday" class="grey">
+                    <span class="headerNavContent navSatSun">SUNDAY OCT 17</span></a>
             </div>
         </div>
     </div>
 
-    <div class="content">
+    <div class="content" id="ttFriday">
         <div id="timetables">
             <div id="personalTimetable">
                 <h1 class="font1 day">Friday October 15</h1>
@@ -516,7 +518,7 @@
                     </tr>
                     <tr class="bgOranjeHtc">
                         <td class="borderSolid" height="35">
-                            <p class="venueFullTt">Altstadt</p>
+                            <p class="venueFullTt" id="ttSaturday">Altstadt</p>
                         </td>
                         <td class="borderDotted" height="35">
                         </td>
@@ -591,6 +593,786 @@
             </div>
         </div>
     </div>
+
+    <div class="content">
+        <div id="timetables">
+            <div id="personalTimetable">
+                <h1 class="font1 day">Saturday October 16</h1>
+                <h2 class="font2 grey">personal timetable</h2>
+                <div>
+                    <!-- De persoonlijke timetable -->
+                    <table border="0" cellspacing="0">
+
+                        <tr>
+                            <!-- Dit is niet zichtbaar.
+                                Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
+                            <td height="1px" width="150px"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                        </tr>
+
+                        <tr>
+                            <!-- Hier worden de uren aangegeven boven de timetables -->
+                            <td class="tijdenTt zesuur" colspan="2">
+                                <b>18:00</b>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>19:00</b>
+                            </td>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>20.00</b>
+                            </td>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>21:00</b>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>22:00</b>
+                            </td>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>23:00</b>
+                            </td>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>00:00</b>
+                            </td>
+                        </tr>
+
+                        <tr class="bgOranjeHtc">
+                            <!-- Dit is de achtergrond van de persoonlijke timetable.
+                                Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="fullTt">
+                <h2 class="font2 grey">full timetable</h2>
+
+                <table border="0" cellspacing="0">
+
+                    <tr>
+                        <!-- Dit is niet zichtbaar. Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
+                        <td height="1" width="150"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                    </tr>
+
+                    <tr>
+                        <!-- Hier worden de uren aangegeven boven de timetables -->
+                        <td class="tijdenTt zesuur" colspan="2">
+                            <b>18:00</b>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>19:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>20.00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>21:00</b>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>22:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>23:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>00:00</b>
+                        </td>
+                    </tr>
+
+                    <tr class="bgRozeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Effenaar</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgOranjeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Subbar</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgRozeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Stroomhuis</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgOranjeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Fifth</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgRozeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Dynamo</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgOranjeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Altstadt</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="artistinfo2">
+            <div class="topsection">
+
+                <div class="right">
+                    <p class="details">HIGHEST MATCH</p>
+                </div>
+
+                <div class="left">
+                    <i class="fa-solid fa-clock inline"></i>
+                    <p class="match inline" id="timeInfo">start-end</p>
+                    <i class="fa-solid fa-location-pin inline"></i>
+                    <p class="match inline" id="LocationInfo">Venue</p>
+                </div>
+            </div>
+
+            <div class="gradientPhoto">
+                <div class="photo2">
+                    <h1 class="artistname" id="artistnameInfo">Artist name</h1>
+                    <h2 class="artistgenre" id="artistgenreInfo">genres</h2>
+                </div>
+            </div>
+
+            <div class="otherartists">
+
+                <p class="artistdesc">This artist sounds similar to some artists you love!</p>
+                <div class="otherartistpic">
+                    <img class="otherartistpics" src="../img/artp1-modified.png">
+                    <p class="oap">Beatles</p>
+                </div>
+                <div class="otherartistpic"><img class="otherartistpics" src="../img/artp1-modified.png">
+                    <p class="oap">Queen</p>
+                </div>
+                <div class="otherartistpic"><img class="otherartistpics" src="../img/artp1-modified.png">
+                    <p class="oap">Led Zeppelin</p>
+
+                </div>
+            </div>
+
+            <div class="spotify">
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/artist/4w7pwjdOFXrlfggOs52f4c?utm_source=generator" width="70%"
+                    height="205" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+        </div>
+
+
+    </div>
+
+    <div class="content">
+        <div id="timetables">
+            <div id="personalTimetable">
+                <h1 class="font1 day" id="ttSunday">Sunday October 17</h1>
+                <h2 class="font2 grey">personal timetable</h2>
+                <div>
+                    <!-- De persoonlijke timetable -->
+                    <table border="0" cellspacing="0">
+
+                        <tr>
+                            <!-- Dit is niet zichtbaar.
+                                Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
+                            <td height="1px" width="150px"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                            <td class="h1w50"></td>
+                        </tr>
+
+                        <tr>
+                            <!-- Hier worden de uren aangegeven boven de timetables -->
+                            <td class="tijdenTt zesuur" colspan="2">
+                                <b>18:00</b>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>19:00</b>
+                            </td>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>20.00</b>
+                            </td>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>21:00</b>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>22:00</b>
+                            </td>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>23:00</b>
+                            </td>
+                            </td>
+                            <td class="tijdenTt" align="center" colspan="2">
+                                <b>00:00</b>
+                            </td>
+                        </tr>
+
+                        <tr class="bgOranjeHtc">
+                            <!-- Dit is de achtergrond van de persoonlijke timetable.
+                                Hier worden ook de uur- en halfuur markeringslijnen opgeroepen. -->
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td class="borderDotted h180">
+                            </td>
+                            <td class="borderSolid h180">
+                            </td>
+                            <td>
+                            </td>
+                            <td></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <div class="fullTt">
+                <h2 class="font2 grey">full timetable</h2>
+
+                <table border="0" cellspacing="0">
+
+                    <tr>
+                        <!-- Dit is niet zichtbaar. Het zorgt er alleen voor dat de tijden kloppen met de lijnen -->
+                        <td height="1" width="150"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                        <td class="h1w50"></td>
+                    </tr>
+
+                    <tr>
+                        <!-- Hier worden de uren aangegeven boven de timetables -->
+                        <td class="tijdenTt zesuur" colspan="2">
+                            <b>18:00</b>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>19:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>20.00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>21:00</b>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>22:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>23:00</b>
+                        </td>
+                        </td>
+                        <td class="tijdenTt" align="center" colspan="2">
+                            <b>00:00</b>
+                        </td>
+                    </tr>
+
+                    <tr class="bgRozeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Effenaar</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgOranjeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Subbar</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgRozeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Stroomhuis</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgOranjeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Fifth</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgRozeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Dynamo</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                    <tr class="bgOranjeHtc">
+                        <td class="borderSolid" height="35">
+                            <p class="venueFullTt">Altstadt</p>
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td class="borderDotted" height="35">
+                        </td>
+                        <td class="borderSolid" height="35">
+                        </td>
+                        <td>
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <div class="artistinfo2">
+            <div class="topsection">
+
+                <div class="right">
+                    <p class="details">HIGHEST MATCH</p>
+                </div>
+
+                <div class="left">
+                    <i class="fa-solid fa-clock inline"></i>
+                    <p class="match inline" id="timeInfo">start-end</p>
+                    <i class="fa-solid fa-location-pin inline"></i>
+                    <p class="match inline" id="LocationInfo">Venue</p>
+                </div>
+            </div>
+
+            <div class="gradientPhoto">
+                <div class="photo2">
+                    <h1 class="artistname" id="artistnameInfo">Artist name</h1>
+                    <h2 class="artistgenre" id="artistgenreInfo">genres</h2>
+                </div>
+            </div>
+
+            <div class="otherartists">
+
+                <p class="artistdesc">This artist sounds similar to some artists you love!</p>
+                <div class="otherartistpic">
+                    <img class="otherartistpics" src="../img/artp1-modified.png">
+                    <p class="oap">Adele</p>
+                </div>
+                <div class="otherartistpic"><img class="otherartistpics" src="../img/artp1-modified.png">
+                    <p class="oap">Rihanna</p>
+                </div>
+                <div class="otherartistpic"><img class="otherartistpics" src="../img/artp1-modified.png">
+                    <p class="oap">Lady Gaga</p>
+
+                </div>
+            </div>
+
+            <div class="spotify">
+                <iframe style="border-radius:12px"
+                    src="https://open.spotify.com/embed/artist/4w7pwjdOFXrlfggOs52f4c?utm_source=generator" width="70%"
+                    height="205" frameBorder="0" allowfullscreen=""
+                    allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
+            </div>
+        </div>
+
+
+    </div>
+
+    
 </body>
 <script>
     // 20 artists op vrijdag
