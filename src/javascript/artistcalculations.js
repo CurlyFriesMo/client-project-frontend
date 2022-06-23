@@ -1,88 +1,108 @@
 document.addEventListener("DOMContentLoaded", function (event) {
 
+
+
+
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+
+
+
+
+
+
+
         // artiest 1 (starttijd, eindtijd, datum, artiestennaam, genre, venue)
-        var start1 = "20:00";
-        var end1 = "21:00";
-        var day1 = new Date("10/15/2021");
-        var artistname1 = document.getElementsByClassName('artistname1');
-        for (var i = 0; i < artistname1.length; i++) {
-            artistname1[i].innerHTML = "Commander Spoon";
-        }
-        document.getElementById("genre1").innerHTML = "Dark folk";
-        var venueArtist1 = 5;
-        // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
+        // var start1 = "20:00";
+        // var end1 = "21:00";
+        // var day1 = new Date("10/15/2021");
+        // var artistname1 = document.getElementsByClassName('artistname1');
+        // for (var i = 0; i < artistname1.length; i++) {
+        //     artistname1[i].innerHTML = "Commander Spoon";
+        // }
+        // document.getElementById("genre1").innerHTML = "Dark folk";
+        // var venueArtist1 = 5;
+        // // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
     
-        var blokArtist1Personal = document.getElementById("blokArtist1Personal");
-        var blokArtist1Full = document.getElementById("blokArtist1Full");
+        // var blokArtist1Personal = document.getElementById("blokArtist1Personal");
+        // var blokArtist1Full = document.getElementById("blokArtist1Full");
     
     
-        //Zorgen dat de artiesten in de full timetable bij de goede venue staan
-        if (venueArtist1 == 1) {
-            blokArtist1Full.style.marginTop = "24px";
-        } else if (venueArtist1 == 2) {
-            blokArtist1Full.style.marginTop = "61px";
-        } else if (venueArtist1 == 3) {
-            blokArtist1Full.style.marginTop = "98px";
-        } else if (venueArtist1 == 4) {
-            blokArtist1Full.style.marginTop = "135px";
-        } else if (venueArtist1 == 5) {
-            blokArtist1Full.style.marginTop = "172px";
-        } else if (venueArtist1 == 6) {
-            blokArtist1Full.style.marginTop = "209px";
-        } else {
-            console.write("error venue");
-        }
+        // //Zorgen dat de artiesten in de full timetable bij de goede venue staan
+        // if (venueArtist1 == 1) {
+        //     blokArtist1Full.style.marginTop = "24px";
+        // } else if (venueArtist1 == 2) {
+        //     blokArtist1Full.style.marginTop = "61px";
+        // } else if (venueArtist1 == 3) {
+        //     blokArtist1Full.style.marginTop = "98px";
+        // } else if (venueArtist1 == 4) {
+        //     blokArtist1Full.style.marginTop = "135px";
+        // } else if (venueArtist1 == 5) {
+        //     blokArtist1Full.style.marginTop = "172px";
+        // } else if (venueArtist1 == 6) {
+        //     blokArtist1Full.style.marginTop = "209px";
+        // } else {
+        //     console.write("error venue");
+        // }
     
-        start1 = start1.split(":");
-        end1 = end1.split(":");
+        // start1 = start1.split(":");
+        // end1 = end1.split(":");
     
-        function diff(start1, end1) {
+        // function diff(start1, end1) {
     
-            var start1Date = new Date(0, 0, 0, start1[0], start1[1], 0);
-            var end1Date = new Date(0, 0, 0, end1[0], end1[1], 0);
-            var diff = end1Date.getTime() - start1Date.getTime();
-            var hours = Math.floor(diff / 1000 / 60 / 60);
-            diff -= hours * 1000 * 60 * 60;
-            var minutes = Math.floor(diff / 1000 / 60);
+        //     var start1Date = new Date(0, 0, 0, start1[0], start1[1], 0);
+        //     var end1Date = new Date(0, 0, 0, end1[0], end1[1], 0);
+        //     var diff = end1Date.getTime() - start1Date.getTime();
+        //     var hours = Math.floor(diff / 1000 / 60 / 60);
+        //     diff -= hours * 1000 * 60 * 60;
+        //     var minutes = Math.floor(diff / 1000 / 60);
     
-            var totalMinutes = (hours * 60) + minutes;
+        //     var totalMinutes = (hours * 60) + minutes;
     
-            if (hours < 0)
-                hours = hours + 24;
+        //     if (hours < 0)
+        //         hours = hours + 24;
     
-            return totalMinutes
-        }
-        console.log(diff(start1, end1));
+        //     return totalMinutes
+        // }
+        // console.log(diff(start1, end1));
     
-        // how long does the performance take? set the width
-        var widthArtist1 = diff(start1, end1) / 6 * 10;
-        blokArtist1Personal.style.width = widthArtist1 + "px";
-        blokArtist1Full.style.width = (widthArtist1 - 7) + "px";
+        // // how long does the performance take? set the width
+        // var widthArtist1 = diff(start1, end1) / 6 * 10;
+        // blokArtist1Personal.style.width = widthArtist1 + "px";
+        // blokArtist1Full.style.width = (widthArtist1 - 7) + "px";
     
-        //spot on the timeline: when does the performance start?
-        var marginLeftArtist1 = ((((start1[0] - 18) * 60)) / 6 * 10) + (start1[1] / 6 * 10) + 150;
-        blokArtist1Personal.style.marginLeft = marginLeftArtist1 + "px";
-        blokArtist1Full.style.marginLeft = (marginLeftArtist1 + 1) + "px";
+        // //spot on the timeline: when does the performance start?
+        // var marginLeftArtist1 = ((((start1[0] - 18) * 60)) / 6 * 10) + (start1[1] / 6 * 10) + 150;
+        // blokArtist1Personal.style.marginLeft = marginLeftArtist1 + "px";
+        // blokArtist1Full.style.marginLeft = (marginLeftArtist1 + 1) + "px";
     
-        // To calculate the time difference of two dates: in which timetable does it have to be?
-        // de laatste dag van het festival om te kunnen vergelijken:
-        var day0 = new Date("10/17/2021");
+        // // To calculate the time difference of two dates: in which timetable does it have to be?
+        // // de laatste dag van het festival om te kunnen vergelijken:
+        // var day0 = new Date("10/17/2021");
     
-        var Difference_In_Time = day1.getTime() - day0.getTime();
-        var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+        // var Difference_In_Time = day1.getTime() - day0.getTime();
+        // var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
     
-        if (Difference_In_Days == -2) {
-            //its friday
-            blokArtist1Personal.style.marginTop = "40px";
-        } else if (Difference_In_Days == -1) {
-            //its saturday
-            blokArtist1Personal.style.marginTop = "250px";
-        } else if (Difference_In_Days == 0) {
-            //its sunday
-            blokArtist1Personal.style.marginTop = "350px";
-        } else {
-            console.log("error days");
-        }
+        // if (Difference_In_Days == -2) {
+        //     //its friday
+        //     blokArtist1Personal.style.marginTop = "40px";
+        // } else if (Difference_In_Days == -1) {
+        //     //its saturday
+        //     blokArtist1Personal.style.marginTop = "250px";
+        // } else if (Difference_In_Days == 0) {
+        //     //its sunday
+        //     blokArtist1Personal.style.marginTop = "350px";
+        // } else {
+        //     console.log("error days");
+        // }
     
     
     
@@ -503,75 +523,75 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
             //Artist7
 
-            var start7 = "18:30";
-            var end7 = "19:30";
-            var day7 = new Date("10/15/2021");
-            var artistname7 = document.getElementsByClassName('artistname7');
-            for (var i = 0; i < artistname7.length; i++) {
-                artistname7[i].innerHTML = "ITem";
-            }
-            document.getElementById("genre7").innerHTML = "Idk";
-            var venueArtist7 = 2;
-            // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
+            // var start7 = "18:30";
+            // var end7 = "19:30";
+            // var day7 = new Date("10/15/2021");
+            // var artistname7 = document.getElementsByClassName('artistname7');
+            // for (var i = 0; i < artistname7.length; i++) {
+            //     artistname7[i].innerHTML = "ITem";
+            // }
+            // document.getElementById("genre7").innerHTML = "Idk";
+            // var venueArtist7 = 2;
+            // // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
 
-            var blokArtist7Personal = document.getElementById("blokArtist7Personal");
-            var blokArtist7Full = document.getElementById("blokArtist7Full");
+            // var blokArtist7Personal = document.getElementById("blokArtist7Personal");
+            // var blokArtist7Full = document.getElementById("blokArtist7Full");
 
-            if (venueArtist7 == 1) {
-                blokArtist7Full.style.marginTop = "24px";
-            } else if (venueArtist7 == 2) {
-                blokArtist7Full.style.marginTop = "61px";
-            } else if (venueArtist7 == 3) {
-                blokArtist7Full.style.marginTop = "98px";
-            } else if (venueArtist7 == 4) {
-                blokArtist7Full.style.marginTop = "135px";
-            } else if (venueArtist7 == 5) {
-                blokArtist7Full.style.marginTop = "172px";
-            } else if (venueArtist7 == 6) {
-                blokArtist7Full.style.marginTop = "209px";
-            } else {
-                console.write("error venue");
-            }
+            // if (venueArtist7 == 1) {
+            //     blokArtist7Full.style.marginTop = "24px";
+            // } else if (venueArtist7 == 2) {
+            //     blokArtist7Full.style.marginTop = "61px";
+            // } else if (venueArtist7 == 3) {
+            //     blokArtist7Full.style.marginTop = "98px";
+            // } else if (venueArtist7 == 4) {
+            //     blokArtist7Full.style.marginTop = "135px";
+            // } else if (venueArtist7 == 5) {
+            //     blokArtist7Full.style.marginTop = "172px";
+            // } else if (venueArtist7 == 6) {
+            //     blokArtist7Full.style.marginTop = "209px";
+            // } else {
+            //     console.write("error venue");
+            // }
 
-            start7 = start7.split(":");
-            end7 = end7.split(":");
+            // start7 = start7.split(":");
+            // end7 = end7.split(":");
 
-            function diff(start7, end7) {
+            // function diff(start7, end7) {
 
-                var start7Date = new Date(0, 0, 0, start7[0], start7[1], 0);
-                var end7Date = new Date(0, 0, 0, end7[0], end7[1], 0);
-                var diff = end7Date.getTime() - start7Date.getTime();
-                var hours = Math.floor(diff / 1000 / 60 / 60);
-                diff -= hours * 1000 * 60 * 60;
-                var minutes = Math.floor(diff / 1000 / 60);
-                var totalMinutes7 = (hours * 60) + minutes;
+            //     var start7Date = new Date(0, 0, 0, start7[0], start7[1], 0);
+            //     var end7Date = new Date(0, 0, 0, end7[0], end7[1], 0);
+            //     var diff = end7Date.getTime() - start7Date.getTime();
+            //     var hours = Math.floor(diff / 1000 / 60 / 60);
+            //     diff -= hours * 1000 * 60 * 60;
+            //     var minutes = Math.floor(diff / 1000 / 60);
+            //     var totalMinutes7 = (hours * 60) + minutes;
 
-                if (hours < 0)
-                    hours = hours + 24;
+            //     if (hours < 0)
+            //         hours = hours + 24;
 
-                return totalMinutes7
-            }
+            //     return totalMinutes7
+            // }
 
-            var widthArtist7 = diff(start7, end7) / 6 * 10;
-            blokArtist7Personal.style.width = widthArtist7 + "px";
-            blokArtist7Full.style.width = (widthArtist7 - 7) + "px";
+            // var widthArtist7 = diff(start7, end7) / 6 * 10;
+            // blokArtist7Personal.style.width = widthArtist7 + "px";
+            // blokArtist7Full.style.width = (widthArtist7 - 7) + "px";
 
-            var marginLeftArtist7 = ((((start7[0] - 18) * 60)) / 6 * 10) + (start7[1] / 6 * 10) + 150;
-            blokArtist7Personal.style.marginLeft = marginLeftArtist7 + "px";
-            blokArtist7Full.style.marginLeft = (marginLeftArtist7 + 1) + "px";
+            // var marginLeftArtist7 = ((((start7[0] - 18) * 60)) / 6 * 10) + (start7[1] / 6 * 10) + 150;
+            // blokArtist7Personal.style.marginLeft = marginLeftArtist7 + "px";
+            // blokArtist7Full.style.marginLeft = (marginLeftArtist7 + 1) + "px";
 
-            var Difference_In_Time7 = day7.getTime() - day0.getTime();
-            var Difference_In_Days7 = Difference_In_Time7 / (1000 * 3600 * 24);
+            // var Difference_In_Time7 = day7.getTime() - day0.getTime();
+            // var Difference_In_Days7 = Difference_In_Time7 / (1000 * 3600 * 24);
 
-            if (Difference_In_Days7 == -2) {
-                blokArtist7Personal.style.marginTop = "40px";
-            } else if (Difference_In_Days7 == -1) {
-                blokArtist7Personal.style.marginTop = "250px";
-            } else if (Difference_In_Days7 == 0) {
-                blokArtist7Personal.style.marginTop = "350px";
-            } else {
-                console.log("error days");
-            }
+            // if (Difference_In_Days7 == -2) {
+            //     blokArtist7Personal.style.marginTop = "40px";
+            // } else if (Difference_In_Days7 == -1) {
+            //     blokArtist7Personal.style.marginTop = "250px";
+            // } else if (Difference_In_Days7 == 0) {
+            //     blokArtist7Personal.style.marginTop = "350px";
+            // } else {
+            //     console.log("error days");
+            // }
 
 
 
