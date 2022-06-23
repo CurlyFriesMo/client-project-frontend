@@ -47,6 +47,7 @@
                 <h2 class="font2 grey">personal timetable</h2>
                 <div>
                     <div class="blokArtistPersonal" id="blokArtist1Personal" onclick="artist1clicked()">
+                        <!-- <img src="../img/commanderspoon.jpg)" class="placeholder1"> -->
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname1">Artist name</p>
                         <p class="bloktekst bloktekstGenre" id="genre1">Genre</p>
@@ -566,7 +567,7 @@
                 </div>
             </div>
 
-            <div class="photo">
+            <div class="photo" id="photoArtist">
                 <h1 class="artistname" id="artistnameInfo">Max Frimout</h1>
                 <h2 class="artistgenre" id="artistgenreInfo">NEUROFUNK</h2>
             </div>
@@ -1491,9 +1492,14 @@
         document.getElementById("LocationInfo").innerHTML = venue1;
         document.getElementById("artistnameInfo").innerHTML = nameOfArtist1;
         document.getElementById("artistgenreInfo").innerHTML = genreArtist1;
+        document.getElementById("photoArtist").style.backgroundImage = "url(../img/commanderspoon.jpg)";
+
         // document.getElementById("blokArtist1Full").style.border = "5px solid";
         // document.getElementById("blokArtist1Full").style.borderImage =
         //     "linear-gradient(var(--angle), #8CFBDE, #FF99A5, #7D80DA) 1";
+
+        // background-image: url(../img/maxfrimout.jpg);
+
 
         // document.getElementById("blokArtist1Personal").style.border = "5px solid";
         // document.getElementById("blokArtist1Personal").style.borderImage =

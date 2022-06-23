@@ -343,11 +343,11 @@ table {
     padding-right: 2px;
 }
 
-#blokArtist1Personal {
-    visibility: visible;
-}
+/* #blokArtist1Personal {
+    z-index: 10;
+} */
 
-#blokArtist1Full {
+/* #blokArtist1Full {
     visibility: visible;
 }
 
@@ -357,7 +357,7 @@ table {
 
 #blokArtist2Full {
     visibility: visible;
-}
+} */
 
 .placeholder1 {
     height: 30px;
