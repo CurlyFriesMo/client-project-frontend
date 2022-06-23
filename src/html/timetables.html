@@ -21,6 +21,77 @@
     <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+
+    <style>
+        .blokArtistFull:hover {
+            box-shadow: 1px 0px 5px 2px #7D80DA;
+            transform: scale(1.02);
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .inline {
+            display: inline-block;
+        }
+
+        .grey {
+            text-decoration: none;
+        }
+
+        .blokArtistPersonal:hover {
+            box-shadow: 1px 0px 5px 2px #7D80DA;
+            transform: scale(1.02);
+        }
+
+        .pastNiet {
+            margin-top: -10px;
+        }
+
+
+        .movingBorder {
+            --angle: 0deg;
+            /* border: 0px solid;
+            border-image: linear-gradient(var(--angle), #8CFBDE, #FF99A5, #7D80DA) 1; */
+            animation: 5s rotate linear infinite;
+        }
+
+        .photo2 {
+            height: 170px;
+            background-image: url("../img/maxfrimout.jpg");
+            background-repeat: no-repeat;
+            background-position: right;
+            -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)))
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        @keyframes rotate {
+            to {
+                --angle: 360deg;
+            }
+        }
+
+        @property --angle {
+            syntax: '<angle>';
+            initial-value: 0deg;
+            inherits: false;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -46,7 +117,7 @@
                 <h1 class="font1 day">Friday October 15</h1>
                 <h2 class="font2 grey">personal timetable</h2>
                 <div>
-                    <div class="blokArtistPersonal" id="blokArtist1Personal" onclick="artist1clicked()">
+                    <div class="blokArtistPersonal" id="blokArtist1Personal" onclick=artist1clicked()>
                         <!-- <img src="../img/commanderspoon.jpg)" class="placeholder1"> -->
                         <img src="placeholder-image.jpeg" class="placeholder1">
                         <p class="bloktekst artistname1">Artist name</p>

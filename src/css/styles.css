@@ -33,13 +33,23 @@
 
 .artistinfo {
     margin-right: 6em;
-    background: rgb(232, 181, 186);
-    background: linear-gradient(90deg, rgba(232, 181, 186, 1) 0%, rgba(206, 117, 85, 1) 100%);
+    /* background: rgb(232, 181, 186); */
+    /* background: linear-gradient(90deg, rgba(232, 181, 186, 1) 0%, rgba(206, 117, 85, 1) 100%); */
     margin-left: 50px;
     width: 560px;
     height: 655px;
-    background-color: rgb(255, 209, 214);
+    /* background-color: rgb(255, 209, 214); */
     margin-top: 30px;
+
+
+    /* margin-right: 6em; */
+    /* margin-left: 50px; */
+    /* width: 560px; */
+    /* height: 655px; */
+    /* margin-top: 30px; */
+    background: linear-gradient(-45deg, #CD7454, #FFD1D6, #D99B59);
+    /* background-size: 400% 400%; */
+    animation: gradient 12s ease infinite;
 }
 
 .personaltt {
@@ -114,8 +124,8 @@
     background-image: url(../img/maxfrimout.jpg);
     background-repeat: no-repeat;
     background-position: right;
-    background-color: rgb(232, 181, 186);
-    background-color: linear-gradient(270deg, rgba(232, 181, 186, 0.8799894957983193) 0%, rgba(254, 208, 213, 1) 94%);
+    /* background-color: rgb(232, 181, 186); */
+    /* background-color: linear-gradient(270deg, rgba(232, 181, 186, 0.8799894957983193) 0%, rgba(254, 208, 213, 1) 94%); */
 }
 
 .otherartists {
@@ -498,7 +508,7 @@ table {
     margin-top: 30px;
     background: linear-gradient(-45deg, #CD7454, #FFD1D6, #D99B59);
     background-size: 400% 400%;
-    animation: gradient 15s ease infinite;
+    animation: gradient 12s ease infinite;
 }
 
 @keyframes gradient {
@@ -516,13 +526,27 @@ table {
 }
 
 
-.photo2 {
+
+ .artistinfo2 {
+    margin-right: 6em;
+    margin-left: 50px;
+    width: 560px;
+    height: 655px;
+    margin-top: 30px;
+    background: linear-gradient(-45deg, #CD7454, #FFD1D6, #D99B59);
+    background-size: 400% 400%;
+    animation: gradient 5s ease infinite;
+} 
+
+
+
+/* .photo2 {
     height: 170px;
     background-image: url("../img/maxfrimout.jpg");
     background-repeat: no-repeat;
     background-position: right;
-    /* -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0))) */
-}
+    -webkit-mask-image: -webkit-gradient(linear, left top, right top, from(rgba(0, 0, 0, 1)), to(rgba(0, 0, 0, 0)))
+} */
 
 html {
     scroll-behavior: smooth;
