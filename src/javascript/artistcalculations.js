@@ -63,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
     function diff(start1, end1) {
 
+<<<<<<< HEAD
         var start1Date = new Date(0, 0, 0, start1[0], start1[1], 0);
         var end1Date = new Date(0, 0, 0, end1[0], end1[1], 0);
         var diff = end1Date.getTime() - start1Date.getTime();
@@ -187,6 +188,8 @@ document.addEventListener("DOMContentLoaded", function (event) {
         diff -= hours * 1000 * 60 * 60;
         var minutes = Math.floor(diff / 1000 / 60);
         var totalMinutes7 = (hours * 60) + minutes;
+=======
+>>>>>>> be6d0faaae70673e5d149be65816ca46dafae7ba
 
         if (hours < 0)
             hours = hours + 24;
@@ -202,6 +205,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
     blokArtist7Personal.style.marginLeft = marginLeftArtist7 + "px";
     blokArtist7Full.style.marginLeft = (marginLeftArtist7 + 1) + "px";
 
+<<<<<<< HEAD
     var Difference_In_Time7 = day7.getTime() - day0.getTime();
     var Difference_In_Days7 = Difference_In_Time7 / (1000 * 3600 * 24);
 
@@ -233,6 +237,107 @@ document.addEventListener("DOMContentLoaded", function (event) {
         // document.getElementById("blokArtist1Fulll").style.border = "none";
     }
     
+=======
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        //
+        // artiest 1 (starttijd, eindtijd, datum, artiestennaam, genre, venue)
+        // var start1 = "20:00";
+        // var end1 = "21:00";
+        // var day1 = new Date("10/15/2021");
+        // var artistname1 = document.getElementsByClassName('artistname1');
+        // for (var i = 0; i < artistname1.length; i++) {
+        //     artistname1[i].innerHTML = "Commander Spoon";
+        // }
+        // document.getElementById("genre1").innerHTML = "Dark folk";
+        // var venueArtist1 = 5;
+        // // voor venue vul in: 1 Effenaar / 2 Subbar / 3 Stroomhuis / 4 Fifth / 5 Dynamo / 6 Altstadt
+        //
+        // var blokArtist1Personal = document.getElementById("blokArtist1Personal");
+        // var blokArtist1Full = document.getElementById("blokArtist1Full");
+        //
+        //
+        // //Zorgen dat de artiesten in de full timetable bij de goede venue staan
+        // if (venueArtist1 == 1) {
+        //     blokArtist1Full.style.marginTop = "24px";
+        // } else if (venueArtist1 == 2) {
+        //     blokArtist1Full.style.marginTop = "61px";
+        // } else if (venueArtist1 == 3) {
+        //     blokArtist1Full.style.marginTop = "98px";
+        // } else if (venueArtist1 == 4) {
+        //     blokArtist1Full.style.marginTop = "135px";
+        // } else if (venueArtist1 == 5) {
+        //     blokArtist1Full.style.marginTop = "172px";
+        // } else if (venueArtist1 == 6) {
+        //     blokArtist1Full.style.marginTop = "209px";
+        // } else {
+        //     console.write("error venue");
+        // }
+        //
+        // start1 = start1.split(":");
+        // end1 = end1.split(":");
+        //
+        // function diff(start1, end1) {
+        //
+        //     var start1Date = new Date(0, 0, 0, start1[0], start1[1], 0);
+        //     var end1Date = new Date(0, 0, 0, end1[0], end1[1], 0);
+        //     var diff = end1Date.getTime() - start1Date.getTime();
+        //     var hours = Math.floor(diff / 1000 / 60 / 60);
+        //     diff -= hours * 1000 * 60 * 60;
+        //     var minutes = Math.floor(diff / 1000 / 60);
+        //
+        //     var totalMinutes = (hours * 60) + minutes;
+        //
+        //     if (hours < 0)
+        //         hours = hours + 24;
+        //
+        //     return totalMinutes
+        // }
+        // console.log(diff(start1, end1));
+        //
+        // // how long does the performance take? set the width
+        // var widthArtist1 = diff(start1, end1) / 6 * 10;
+        // blokArtist1Personal.style.width = widthArtist1 + "px";
+        // blokArtist1Full.style.width = (widthArtist1 - 7) + "px";
+        //
+        // //spot on the timeline: when does the performance start?
+        // var marginLeftArtist1 = ((((start1[0] - 18) * 60)) / 6 * 10) + (start1[1] / 6 * 10) + 150;
+        // blokArtist1Personal.style.marginLeft = marginLeftArtist1 + "px";
+        // blokArtist1Full.style.marginLeft = (marginLeftArtist1 + 1) + "px";
+        //
+        // // To calculate the time difference of two dates: in which timetable does it have to be?
+        // // de laatste dag van het festival om te kunnen vergelijken:
+        // var day0 = new Date("10/17/2021");
+        //
+        // var Difference_In_Time = day1.getTime() - day0.getTime();
+        // var Difference_In_Days = Difference_In_Time / (1000 * 3600 * 24);
+        //
+        // if (Difference_In_Days == -2) {
+        //     //its friday
+        //     blokArtist1Personal.style.marginTop = "40px";
+        // } else if (Difference_In_Days == -1) {
+        //     //its saturday
+        //     blokArtist1Personal.style.marginTop = "250px";
+        // } else if (Difference_In_Days == 0) {
+        //     //its sunday
+        //     blokArtist1Personal.style.marginTop = "350px";
+        // } else {
+        //     console.log("error days");
+        // }
+        //
+        //
+        //
+        //
+>>>>>>> be6d0faaae70673e5d149be65816ca46dafae7ba
     
     
     
